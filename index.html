@@ -49,6 +49,56 @@ button{
 button:hover{
     background:#6f1fd1;
 }
+
+/* --- Stiluri pentru fereastra de plată (Modal) --- */
+.modal {
+    display: none; /* Ascunsă la început */
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7); /* Fundal întunecat transparent */
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background-color: #1f1f1f;
+    padding: 30px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 0 0 20px rgba(138,43,226,1);
+    position: relative;
+}
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #aaa;
+}
+.close-btn:hover {
+    color: white;
+}
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+.pay-btn {
+    background: #2b2b2b;
+    border: 1px solid #8A2BE2;
+    padding: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.pay-btn:hover {
+    background: #8A2BE2;
+}
+
 footer{
     margin-top:30px;
     padding:20px;
@@ -69,38 +119,77 @@ footer{
 <h2>Grad Amethyst</h2>
 <p>Cel mai special grad de pe server.</p>
 <p class="price">50 Lei</p>
-<button>Cumpără</button>
+<button class="buy-btn">Cumpără</button>
 </div>
 
 <div class="card">
 <h2>100 Points</h2>
 <p class="price">5 Lei</p>
-<button>Cumpără</button>
+<button class="buy-btn">Cumpără</button>
 </div>
 
 <div class="card">
 <h2>500 Points</h2>
 <p class="price">15 Lei</p>
-<button>Cumpără</button>
+<button class="buy-btn">Cumpără</button>
 </div>
 
 <div class="card">
 <h2>750 Points</h2>
 <p class="price">25 Lei</p>
-<button>Cumpără</button>
+<button class="buy-btn">Cumpără</button>
 </div>
 
 <div class="card">
 <h2>1500 Points</h2>
 <p class="price">50 Lei</p>
-<button>Cumpără</button>
+<button class="buy-btn">Cumpără</button>
 </div>
 
+</div>
+
+<div id="paymentModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <h3>Alege metoda de plată</h3>
+        <p>Pentru produsul selectat</p>
+        
+        <div class="payment-methods">
+            <button class="pay-btn">💳 Card Bancar</button>
+            <button class="pay-btn">🅿️ PayPal</button>
+            <button class="pay-btn">🔑 Paysafecard</button>
+        </div>
+    </div>
 </div>
 
 <footer>
 <p>© 2026 AmethystSMP Store</p>
 </footer>
+
+<script>
+    const modal = document.getElementById("paymentModal");
+    const closeBtn = document.getElementById("closeModal");
+    const buyButtons = document.querySelectorAll(".buy-btn");
+
+    // Când apeși pe orice buton „Cumpără”, deschide fereastra
+    buyButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            modal.style.display = "flex";
+        });
+    });
+
+    // Când apeși pe „X”, închide fereastra
+    closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    // Când apeși oriunde în afara ferestrei, o închide
+    window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+</script>
 
 </body>
 </html>
