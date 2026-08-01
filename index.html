@@ -8,30 +8,45 @@
 body{
     margin:0;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background:#0b0614;
+    background:#07020d;
     color:#ffffff;
     text-align:center;
-    background-image: radial-gradient(circle at 50% 20%, #2b0c4f 0%, #0b0614 70%);
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(138, 43, 226, 0.25) 0%, transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(153, 50, 204, 0.25) 0%, transparent 40%),
+        linear-gradient(135deg, #07020d 0%, #150524 100%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
+
 header{
-    background: linear-gradient(135deg, #4b0082, #8A2BE2);
+    background: linear-gradient(90deg, #2c0c4f, #4b0082, #2c0c4f);
+    background-size: 200% 200%;
+    animation: gradientShift 6s ease infinite;
     padding: 30px;
-    box-shadow: 0 4px 20px rgba(138,43,226,0.5);
+    box-shadow: 0 4px 25px rgba(138,43,226,0.6);
     border-bottom: 2px solid #b57edc;
 }
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 h1{
     margin:0;
-    font-size: 36px;
-    text-shadow: 0 0 10px rgba(255,255,255,0.6);
+    font-size: 38px;
+    text-shadow: 0 0 15px rgba(218, 112, 214, 0.8), 0 0 30px rgba(138, 43, 226, 0.6);
     letter-spacing: 2px;
 }
+
 header p {
     margin: 10px 0 0 0;
     color: #e0d1ff;
     font-size: 16px;
+    text-shadow: 0 0 5px rgba(255,255,255,0.4);
 }
 
 /* Buton de întoarcere în meniul principal */
@@ -39,21 +54,21 @@ header p {
     margin: 25px 0;
 }
 .back-btn {
-    background: #1a0f2b;
+    background: #150824;
     color: #e0d1ff;
-    border: 2px solid #8A2BE2;
+    border: 2px solid #9932CC;
     padding: 12px 25px;
     border-radius: 12px;
     cursor: pointer;
     font-weight: bold;
     font-size: 16px;
     transition: 0.3s;
-    box-shadow: 0 0 10px rgba(138,43,226,0.3);
+    box-shadow: 0 0 15px rgba(153,50,204,0.4);
 }
 .back-btn:hover {
-    background: #8A2BE2;
+    background: #9932CC;
     color: white;
-    box-shadow: 0 0 20px rgba(138,43,226,0.8);
+    box-shadow: 0 0 25px rgba(218,112,214,0.9);
     transform: scale(1.05);
 }
 
@@ -67,12 +82,13 @@ header p {
     flex: 1;
     padding: 40px;
 }
+
 .menu-card {
-    background: linear-gradient(145deg, #180b29, #25103f);
+    background: linear-gradient(145deg, #12051f, #220b3b);
     border: 2px solid #9932CC;
     border-radius: 20px;
-    width: 240px;
-    height: 200px;
+    width: 250px;
+    height: 220px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -83,6 +99,7 @@ header p {
     position: relative;
     overflow: hidden;
 }
+
 .menu-card::before {
     content: '';
     position: absolute;
@@ -90,25 +107,39 @@ header p {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(0deg, transparent, rgba(255,255,255,0.05), transparent);
+    background: linear-gradient(0deg, transparent, rgba(255,255,255,0.08), transparent);
     transform: rotate(45deg);
     transition: 0.5s;
 }
+
 .menu-card:hover::before {
     top: 50%;
 }
+
 .menu-card:hover {
-    background: linear-gradient(145deg, #2b104c, #421875);
-    border-color: #da70d6;
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 0 30px rgba(218,112,214,0.8), inset 0 0 20px rgba(255,255,255,0.2);
+    background: linear-gradient(145deg, #280a47, #48157a);
+    border-color: #00ffcc;
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 0 35px rgba(0,255,204,0.6), 0 0 20px rgba(153,50,204,0.8);
 }
+
 .menu-card h2 {
-    margin: 0;
+    margin: 15px 0 0 0;
     font-size: 28px;
     color: #f3e8ff;
     text-shadow: 0 0 10px #9932CC;
     letter-spacing: 1px;
+}
+
+.menu-icon {
+    font-size: 50px;
+    filter: drop-shadow(0 0 10px rgba(218,112,214,0.8));
+    animation: floatIcon 3s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
 }
 
 /* Conținutul secțiunilor (Ascuns implicit) */
@@ -126,41 +157,48 @@ header p {
     gap:25px;
     padding:20px 40px 50px 40px;
 }
+
 .card{
-    background: linear-gradient(145deg, #150a24, #201035);
-    border: 2px solid #5a189a;
+    background: linear-gradient(145deg, #12051f, #1e0933);
+    border: 2px solid #6b18bc;
     border-radius: 16px;
     padding: 25px;
     width: 260px;
-    box-shadow: 0 0 15px rgba(90,24,154,0.5);
+    box-shadow: 0 0 20px rgba(107,24,188,0.5);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: 0.3s;
 }
+
 .card:hover {
-    border-color: #b57edc;
-    box-shadow: 0 0 25px rgba(181,126,220,0.7);
+    border-color: #00ffcc;
+    box-shadow: 0 0 30px rgba(0,255,204,0.5), 0 0 15px rgba(138,43,226,0.8);
     transform: translateY(-5px);
 }
+
 .card h2 {
     color: #f3e8ff;
     font-size: 22px;
     margin-top: 0;
+    text-shadow: 0 0 8px rgba(153,50,204,0.6);
 }
+
 .card p {
     color: #c0b2db;
     font-size: 14px;
 }
+
 .price{
     color:#00ffcc;
     font-size:26px;
     font-weight:bold;
     margin: 15px 0;
-    text-shadow: 0 0 10px rgba(0,255,204,0.4);
+    text-shadow: 0 0 12px rgba(0,255,204,0.6);
 }
-button{
-    background: linear-gradient(135deg, #7b2cbf, #9d4edd);
+
+button.buy-btn{
+    background: linear-gradient(135deg, #7b2cbf, #b5179e);
     color:white;
     border: none;
     padding: 12px 20px;
@@ -168,13 +206,15 @@ button{
     cursor:pointer;
     font-weight: bold;
     font-size: 16px;
-    box-shadow: 0 0 10px rgba(123,44,191,0.5);
+    box-shadow: 0 0 15px rgba(183,23,158,0.5);
     transition: 0.3s;
 }
-button:hover{
-    background: linear-gradient(135deg, #9d4edd, #c77dff);
-    box-shadow: 0 0 20px rgba(199,125,255,0.8);
-    transform: scale(1.02);
+
+button.buy-btn:hover{
+    background: linear-gradient(135deg, #b5179e, #00ffcc);
+    color: #07020d;
+    box-shadow: 0 0 25px rgba(0,255,204,0.8);
+    transform: scale(1.03);
 }
 
 /* --- Stiluri pentru fereastra de plată (Modal) --- */
@@ -190,54 +230,65 @@ button:hover{
     justify-content: center;
     align-items: center;
 }
+
 .modal-content {
-    background: linear-gradient(145deg, #180b29, #2b104c);
-    border: 2px solid #b57edc;
+    background: linear-gradient(145deg, #150524, #2c0c4f);
+    border: 2px solid #00ffcc;
     padding: 35px;
     border-radius: 16px;
     width: 340px;
-    box-shadow: 0 0 30px rgba(181,126,220,0.8);
+    box-shadow: 0 0 35px rgba(0,255,204,0.5), 0 0 20px rgba(138,43,226,0.8);
     position: relative;
 }
+
 .modal-content h3 {
     margin-top: 0;
     color: #f3e8ff;
+    text-shadow: 0 0 10px rgba(218,112,214,0.8);
 }
+
 .modal-content p {
     color: #c0b2db;
 }
+
 .close-btn {
     position: absolute;
     right: 15px;
     top: 10px;
     font-size: 26px;
     cursor: pointer;
-    color: #b57edc;
+    color: #00ffcc;
     transition: 0.3s;
 }
+
 .close-btn:hover {
     color: white;
     text-shadow: 0 0 10px white;
 }
+
 .payment-methods {
     display: flex;
     flex-direction: column;
     gap: 12px;
     margin-top: 20px;
 }
+
 .pay-btn {
-    background: #11071f;
+    background: #12051f;
     border: 1px solid #7b2cbf;
     padding: 14px;
     font-weight: bold;
     color: #e0d1ff;
+    border-radius: 8px;
+    cursor: pointer;
     transition: 0.3s;
 }
+
 .pay-btn:hover {
-    background: #7b2cbf;
-    color: white;
-    border-color: #c77dff;
-    box-shadow: 0 0 15px rgba(199,125,255,0.5);
+    background: linear-gradient(135deg, #7b2cbf, #00ffcc);
+    color: #07020d;
+    border-color: #00ffcc;
+    box-shadow: 0 0 20px rgba(0,255,204,0.7);
 }
 
 /* Notificare de succes */
@@ -247,19 +298,19 @@ button:hover{
     bottom: 30px;
     right: 30px;
     background: linear-gradient(135deg, #00b4d8, #00ffcc);
-    color: #0b0614;
+    color: #07020d;
     padding: 15px 25px;
     border-radius: 10px;
     font-weight: bold;
-    box-shadow: 0 0 20px rgba(0,255,204,0.6);
+    box-shadow: 0 0 25px rgba(0,255,204,0.8);
     z-index: 200;
 }
 
 footer{
     margin-top:auto;
     padding:20px;
-    background:#07030d;
-    border-top: 1px solid #2b104c;
+    background:#040108;
+    border-top: 1px solid #280a47;
     color: #8c78b5;
 }
 </style>
@@ -271,16 +322,19 @@ footer{
     <p>Echipamente și resurse cu tematică Free Fire Amethyst</p>
 </header>
 
-<!-- MENIUL PRINCIPAL (Cele 3 pătrățele stil Free Fire) -->
+<!-- MENIUL PRINCIPAL (Cele 3 pătrățele tematice Free Fire) -->
 <div id="main-menu">
     <div class="menu-card" onclick="openSection('grad')">
-        <h2>⚡ Grad</h2>
+        <div class="menu-icon">🛡️</div>
+        <h2>Grad</h2>
     </div>
     <div class="menu-card" onclick="openSection('key')">
-        <h2>🔑 Key</h2>
+        <div class="menu-icon">🔑</div>
+        <h2>Key</h2>
     </div>
     <div class="menu-card" onclick="openSection('points')">
-        <h2>💎 Points</h2>
+        <div class="menu-icon">💎</div>
+        <h2>Points</h2>
     </div>
 </div>
 
@@ -289,7 +343,7 @@ footer{
     <div class="back-btn-container">
         <button class="back-btn" onclick="goHome()">⬅ Înapoi la meniu</button>
     </div>
-    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC;">Grade Legendare</h2>
+    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Grade Legendare</h2>
     <div class="container">
         <div class="card">
             <div>
@@ -329,7 +383,7 @@ footer{
     <div class="back-btn-container">
         <button class="back-btn" onclick="goHome()">⬅ Înapoi la meniu</button>
     </div>
-    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC;">Chei de Cufăr</h2>
+    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Chei de Cufăr</h2>
     <div class="container">
         <div class="card">
             <div>
@@ -369,7 +423,7 @@ footer{
     <div class="back-btn-container">
         <button class="back-btn" onclick="goHome()">⬅ Înapoi la meniu</button>
     </div>
-    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC;">Pachete de Diamante / Puncte</h2>
+    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Pachete de Diamante / Puncte</h2>
     <div class="container">
         <div class="card">
             <div>
