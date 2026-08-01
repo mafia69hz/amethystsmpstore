@@ -40,11 +40,15 @@ h1{
     padding:20px;
     width:250px;
     box-shadow:0 0 10px rgba(138,43,226,.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .price{
     color:#00ff99;
     font-size:24px;
     font-weight:bold;
+    margin: 15px 0;
 }
 button{
     background:#8A2BE2;
@@ -53,6 +57,7 @@ button{
     padding:10px 20px;
     border-radius:8px;
     cursor:pointer;
+    font-weight: bold;
 }
 button:hover{
     background:#6f1fd1;
@@ -107,6 +112,22 @@ button:hover{
     background: #8A2BE2;
 }
 
+/* --- Notificare de succes --- */
+.notification {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #00ff99;
+    color: #121212;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(0,255,153,0.5);
+    z-index: 200;
+    animation: fadeInOut 3s ease;
+}
+
 footer{
     margin-top:30px;
     padding:20px;
@@ -125,23 +146,36 @@ footer{
 <h2 class="section-title">Grade</h2>
 <div class="container">
     <div class="card">
-        <h2>Grad OG</h2>
-        <p>Un grad exclusiv pentru jucătorii vechi.</p>
-        <p class="price">20 euro</p>
-        <button class="buy-btn">Cumpără</button>
+        <div>
+            <h2>Grad OG</h2>
+            <p>Un grad exclusiv pentru jucătorii vechi.</p>
+        </div>
+        <div>
+            <p class="price">20 euro</p>
+            <button class="buy-btn" data-product="Grad OG">Cumpără</button>
+        </div>
     </div>
 
     <div class="card">
-        <h2>Grad CPVP</h2>
-        <p class="price">5 euro</p>
-        <button class="buy-btn">Cumpără</button>
+        <div>
+            <h2>Grad CPVP</h2>
+            <p>Grad dedicat pasionaților de player versus player.</p>
+        </div>
+        <div>
+            <p class="price">5 euro</p>
+            <button class="buy-btn" data-product="Grad CPVP">Cumpără</button>
+        </div>
     </div>
 
     <div class="card">
-        <h2>Grad Amethyst</h2>
-        <p>Cel mai special grad de pe server.</p>
-        <p class="price">10 euro</p>
-        <button class="buy-btn">Cumpără</button>
+        <div>
+            <h2>Grad Amethyst</h2>
+            <p>Cel mai special grad de pe server.</p>
+        </div>
+        <div>
+            <p class="price">10 euro</p>
+            <button class="buy-btn" data-product="Grad Amethyst">Cumpără</button>
+        </div>
     </div>
 </div>
 
@@ -149,24 +183,36 @@ footer{
 <h2 class="section-title">Chei / Keys</h2>
 <div class="container">
     <div class="card">
-        <h2>Key Amethyst</h2>
-        <p>Cheie pentru cufărul Amethyst.</p>
-        <p class="price">3 euro</p>
-        <button class="buy-btn">Cumpără</button>
+        <div>
+            <h2>Key Amethyst</h2>
+            <p>Cheie pentru cufărul Amethyst cu șanse mari.</p>
+        </div>
+        <div>
+            <p class="price">3 euro</p>
+            <button class="buy-btn" data-product="Key Amethyst">Cumpără</button>
+        </div>
     </div>
 
     <div class="card">
-        <h2>Key Prime</h2>
-        <p>Cheie pentru cufărul Prime.</p>
-        <p class="price">1 euro</p>
-        <button class="buy-btn">Cumpără</button>
+        <div>
+            <h2>Key Prime</h2>
+            <p>Cheie pentru cufărul Prime.</p>
+        </div>
+        <div>
+            <p class="price">1 euro</p>
+            <button class="buy-btn" data-product="Key Prime">Cumpără</button>
+        </div>
     </div>
 
     <div class="card">
-        <h2>Key Crimson</h2>
-        <p>Cheie pentru cufărul Crimson.</p>
-        <p class="price">1 euro</p>
-        <button class="buy-btn">Cumpără</button>
+        <div>
+            <h2>Key Crimson</h2>
+            <p>Cheie pentru cufărul Crimson.</p>
+        </div>
+        <div>
+            <p class="price">1 euro</p>
+            <button class="buy-btn" data-product="Key Crimson">Cumpără</button>
+        </div>
     </div>
 </div>
 
@@ -174,43 +220,67 @@ footer{
 <h2 class="section-title">Puncte / Points</h2>
 <div class="container">
     <div class="card">
-        <h2>100 Points</h2>
-        <p class="price">1 euro</p>
-        <button class="buy-btn">Cumpără</button>
+        <div>
+            <h2>100 Points</h2>
+            <p>Puncte pentru magazinul din joc.</p>
+        </div>
+        <div>
+            <p class="price">1 euro</p>
+            <button class="buy-btn" data-product="100 Points">Cumpără</button>
+        </div>
     </div>
 
     <div class="card">
-        <h2>500 Points</h2>
-        <p class="price">3 euro</p>
-        <button class="buy-btn">Cumpără</button>
+        <div>
+            <h2>500 Points</h2>
+            <p>Puncte pentru magazinul din joc.</p>
+        </div>
+        <div>
+            <p class="price">3 euro</p>
+            <button class="buy-btn" data-product="500 Points">Cumpără</button>
+        </div>
     </div>
 
     <div class="card">
-        <h2>750 Points</h2>
-        <p class="price">5 euro</p>
-        <button class="buy-btn">Cumpără</button>
+        <div>
+            <h2>750 Points</h2>
+            <p>Puncte pentru magazinul din joc.</p>
+        </div>
+        <div>
+            <p class="price">5 euro</p>
+            <button class="buy-btn" data-product="750 Points">Cumpără</button>
+        </div>
     </div>
 
     <div class="card">
-        <h2>1500 Points</h2>
-        <p class="price">10 euro</p>
-        <button class="buy-btn">Cumpără</button>
+        <div>
+            <h2>1500 Points</h2>
+            <p>Puncte pentru magazinul din joc.</p>
+        </div>
+        <div>
+            <p class="price">10 euro</p>
+            <button class="buy-btn" data-product="1500 Points">Cumpără</button>
+        </div>
     </div>
 </div>
 
+<!-- Modalul de Plată -->
 <div id="paymentModal" class="modal">
     <div class="modal-content">
         <span class="close-btn" id="closeModal">&times;</span>
         <h3>Alege metoda de plată</h3>
-        <p>Pentru produsul selectat</p>
+        <p id="selectedProductText">Pentru produsul selectat</p>
         
         <div class="payment-methods">
-            <button class="pay-btn">💳 Card Bancar</button>
-            <button class="pay-btn">🅿️ PayPal</button>
-            <button class="pay-btn">🔑 Paysafecard</button>
+            <button class="pay-btn" onclick="completePayment('Card Bancar')">💳 Card Bancar</button>
+            <button class="pay-btn" onclick="completePayment('PayPal')">🅿️ PayPal</button>
+            <button class="pay-btn" onclick="completePayment('Paysafecard')">🔑 Paysafecard</button>
         </div>
     </div>
 </div>
+
+<!-- Notificare -->
+<div id="notification" class="notification">Plată simulată cu succes!</div>
 
 <footer>
 <p>© 2026 AmethystSMP Store</p>
@@ -220,25 +290,42 @@ footer{
     const modal = document.getElementById("paymentModal");
     const closeBtn = document.getElementById("closeModal");
     const buyButtons = document.querySelectorAll(".buy-btn");
+    const selectedProductText = document.getElementById("selectedProductText");
+    const notification = document.getElementById("notification");
 
-    // Când apeși pe orice buton „Cumpără”, deschide fereastra
+    let currentProduct = "";
+
+    // Deschide fereastra și preia numele produsului
     buyButtons.forEach(button => {
         button.addEventListener("click", () => {
+            currentProduct = button.getAttribute("data-product");
+            selectedProductText.textContent = `Produs: ${currentProduct}`;
             modal.style.display = "flex";
         });
     });
 
-    // Când apeși pe „X”, închide fereastra
+    // Închide fereastra la click pe X
     closeBtn.addEventListener("click", () => {
         modal.style.display = "none";
     });
 
-    // Când apeși oriunde în afara ferestrei, o închide
+    // Închide fereastra la click în afara ei
     window.addEventListener("click", (e) => {
         if (e.target === modal) {
             modal.style.display = "none";
         }
     });
+
+    // Funcție suplimentară pentru simularea unei plăți
+    function completePayment(method) {
+        modal.style.display = "none";
+        notification.textContent = `Ai ales ${method} pentru ${currentProduct}! Mulțumiri!`;
+        notification.style.display = "block";
+        
+        setTimeout(() => {
+            notification.style.display = "none";
+        }, 4000);
+    }
 </script>
 
 </body>
