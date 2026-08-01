@@ -49,7 +49,6 @@ header p {
     text-shadow: 0 0 5px rgba(255,255,255,0.4);
 }
 
-/* Buton de întoarcere în meniul principal */
 .back-btn-container {
     margin: 25px 0;
 }
@@ -72,7 +71,6 @@ header p {
     transform: scale(1.05);
 }
 
-/* Pagina Principală cu cele 3 pătrățele - Tematică Free Fire Amethyst */
 #main-menu {
     display: flex;
     justify-content: center;
@@ -142,7 +140,6 @@ header p {
     50% { transform: translateY(-8px); }
 }
 
-/* Conținutul secțiunilor (Ascuns implicit) */
 .store-section {
     display: none;
 }
@@ -217,7 +214,6 @@ button.buy-btn:hover{
     transform: scale(1.03);
 }
 
-/* --- Stiluri pentru fereastra de plată (Modal) --- */
 .modal {
     display: none;
     position: fixed;
@@ -291,7 +287,6 @@ button.buy-btn:hover{
     box-shadow: 0 0 20px rgba(0,255,204,0.7);
 }
 
-/* Notificare de succes */
 .notification {
     display: none;
     position: fixed;
@@ -322,7 +317,6 @@ footer{
     <p>Echipamente și resurse cu tematică Free Fire Amethyst</p>
 </header>
 
-<!-- MENIUL PRINCIPAL (Cele 3 pătrățele tematice Free Fire) -->
 <div id="main-menu">
     <div class="menu-card" onclick="openSection('grad')">
         <div class="menu-icon">🛡️</div>
@@ -338,7 +332,6 @@ footer{
     </div>
 </div>
 
-<!-- SECȚIUNEA: GRAD -->
 <div id="grad-section" class="store-section">
     <div class="back-btn-container">
         <button class="back-btn" onclick="goHome()">⬅ Înapoi la meniu</button>
@@ -378,7 +371,6 @@ footer{
     </div>
 </div>
 
-<!-- SECȚIUNEA: KEY -->
 <div id="key-section" class="store-section">
     <div class="back-btn-container">
         <button class="back-btn" onclick="goHome()">⬅ Înapoi la meniu</button>
@@ -418,7 +410,6 @@ footer{
     </div>
 </div>
 
-<!-- SECȚIUNEA: POINTS -->
 <div id="points-section" class="store-section">
     <div class="back-btn-container">
         <button class="back-btn" onclick="goHome()">⬅ Înapoi la meniu</button>
@@ -458,17 +449,37 @@ footer{
         <div class="card">
             <div>
                 <h2>1500 Points</h2>
-                <p>Pachetul maxim de puncte pentru adevărații boși.</p>
+                <p>Pachetul clasic de puncte pentru upgrade-uri mari.</p>
             </div>
             <div>
                 <p class="price">10 euro</p>
                 <button class="buy-btn" data-product="1500 Points">Cumpără</button>
             </div>
         </div>
+        <!-- Adăugate acum -->
+        <div class="card">
+            <div>
+                <h2>3000 Points</h2>
+                <p>Rezerve masive pentru jucătorii avansați.</p>
+            </div>
+            <div>
+                <p class="price">15 euro</p>
+                <button class="buy-btn" data-product="3000 Points">Cumpără</button>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <h2>5000 Points</h2>
+                <p>Pachetul suprem pentru supremație absolută.</p>
+            </div>
+            <div>
+                <p class="price">20 euro</p>
+                <button class="buy-btn" data-product="5000 Points">Cumpără</button>
+            </div>
+        </div>
     </div>
 </div>
 
-<!-- Modalul de Plată (Doar Paysafecard) -->
 <div id="paymentModal" class="modal">
     <div class="modal-content">
         <span class="close-btn" id="closeModal">&times;</span>
@@ -481,7 +492,6 @@ footer{
     </div>
 </div>
 
-<!-- Notificare -->
 <div id="notification" class="notification">Plată simulată cu succes!</div>
 
 <footer>
