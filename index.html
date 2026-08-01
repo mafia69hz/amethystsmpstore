@@ -20,48 +20,73 @@ h1{
     margin:0;
 }
 
-/* --- Stiluri pentru meniurile de secțiuni (Tab-uri) --- */
-.nav-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin: 30px 0;
-    padding: 0 20px;
+/* Buton de întoarcere în meniul principal */
+.back-btn-container {
+    margin: 20px 0;
 }
-.tab-btn {
-    background: #1f1f1f;
-    color: #aaa;
-    border: 2px solid #333;
-    padding: 12px 25px;
-    border-radius: 10px;
-    font-size: 18px;
-    font-weight: bold;
+.back-btn {
+    background: #333;
+    color: white;
+    border: 1px solid #8A2BE2;
+    padding: 10px 20px;
+    border-radius: 8px;
     cursor: pointer;
+    font-weight: bold;
     transition: 0.3s;
 }
-.tab-btn:hover {
-    border-color: #8A2BE2;
-    color: white;
-}
-.tab-btn.active {
+.back-btn:hover {
     background: #8A2BE2;
-    color: white;
-    border-color: #8A2BE2;
-    box-shadow: 0 0 15px rgba(138,43,226,0.6);
 }
 
-/* --- Conținutul secțiunilor --- */
+/* Pagina Principală cu cele 3 pătrățele */
+#main-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    min-height: 50vh;
+    padding: 40px;
+}
+.menu-card {
+    background: #1f1f1f;
+    border: 2px solid #8A2BE2;
+    border-radius: 16px;
+    width: 220px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(138,43,226,0.4);
+    transition: 0.3s;
+}
+.menu-card:hover {
+    background: #8A2BE2;
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(138,43,226,0.8);
+}
+.menu-card h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Conținutul secțiunilor (Ascuns implicit) */
 .store-section {
-    display: none; /* Ascunse implicit */
+    display: none;
 }
 .store-section.active {
-    display: flex; /* Afișată doar cea activă */
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px 40px 40px 40px;
+    display: block;
 }
 
+.container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:20px 40px 40px 40px;
+}
 .card{
     background:#1f1f1f;
     border-radius:12px;
@@ -140,7 +165,7 @@ button:hover{
     background: #8A2BE2;
 }
 
-/* --- Notificare de succes --- */
+/* Notificare de succes */
 .notification {
     display: none;
     position: fixed;
@@ -169,128 +194,145 @@ footer{
     <p>Susține serverul și primește recompense!</p>
 </header>
 
-<!-- Meniul cu cele 3 butoane de secțiuni -->
-<div class="nav-tabs">
-    <button class="tab-btn active" onclick="switchSection('grades')">🛡️ Grade</button>
-    <button class="tab-btn" onclick="switchSection('keys')">🔑 Chei (Keys)</button>
-    <button class="tab-btn" onclick="switchSection('points')">🪙 Puncte (Points)</button>
-</div>
-
-<!-- Secțiunea 1: Grade -->
-<div id="grades" class="store-section active">
-    <div class="card">
-        <div>
-            <h2>Grad OG</h2>
-            <p>Un grad exclusiv pentru jucătorii vechi.</p>
-        </div>
-        <div>
-            <p class="price">20 euro</p>
-            <button class="buy-btn" data-product="Grad OG">Cumpără</button>
-        </div>
+<!-- MENIUL PRINCIPAL (Cele 3 pătrățele) -->
+<div id="main-menu">
+    <div class="menu-card" onclick="openSection('grad')">
+        <h2>Grad</h2>
     </div>
-
-    <div class="card">
-        <div>
-            <h2>Grad CPVP</h2>
-            <p>Grad dedicat pasionaților de player versus player.</p>
-        </div>
-        <div>
-            <p class="price">5 euro</p>
-            <button class="buy-btn" data-product="Grad CPVP">Cumpără</button>
-        </div>
+    <div class="menu-card" onclick="openSection('key')">
+        <h2>Key</h2>
     </div>
-
-    <div class="card">
-        <div>
-            <h2>Grad Amethyst</h2>
-            <p>Cel mai special grad de pe server.</p>
-        </div>
-        <div>
-            <p class="price">10 euro</p>
-            <button class="buy-btn" data-product="Grad Amethyst">Cumpără</button>
-        </div>
+    <div class="menu-card" onclick="openSection('points')">
+        <h2>Points</h2>
     </div>
 </div>
 
-<!-- Secțiunea 2: Chei (Keys) -->
-<div id="keys" class="store-section">
-    <div class="card">
-        <div>
-            <h2>Key Amethyst</h2>
-            <p>Cheie pentru cufărul Amethyst cu șanse mari.</p>
-        </div>
-        <div>
-            <p class="price">3 euro</p>
-            <button class="buy-btn" data-product="Key Amethyst">Cumpără</button>
-        </div>
+<!-- SECȚIUNEA: GRAD -->
+<div id="grad-section" class="store-section">
+    <div class="back-btn-container">
+        <button class="back-btn" onclick="goHome()">⬅ Înapoi la meniu</button>
     </div>
-
-    <div class="card">
-        <div>
-            <h2>Key Prime</h2>
-            <p>Cheie pentru cufărul Prime.</p>
+    <h2>Grade Disponibile</h2>
+    <div class="container">
+        <div class="card">
+            <div>
+                <h2>Grad OG</h2>
+                <p>Un grad exclusiv pentru jucătorii vechi.</p>
+            </div>
+            <div>
+                <p class="price">20 euro</p>
+                <button class="buy-btn" data-product="Grad OG">Cumpără</button>
+            </div>
         </div>
-        <div>
-            <p class="price">1 euro</p>
-            <button class="buy-btn" data-product="Key Prime">Cumpără</button>
+        <div class="card">
+            <div>
+                <h2>Grad CPVP</h2>
+                <p>Grad dedicat pasionaților de player versus player.</p>
+            </div>
+            <div>
+                <p class="price">5 euro</p>
+                <button class="buy-btn" data-product="Grad CPVP">Cumpără</button>
+            </div>
         </div>
-    </div>
-
-    <div class="card">
-        <div>
-            <h2>Key Crimson</h2>
-            <p>Cheie pentru cufărul Crimson.</p>
-        </div>
-        <div>
-            <p class="price">1 euro</p>
-            <button class="buy-btn" data-product="Key Crimson">Cumpără</button>
+        <div class="card">
+            <div>
+                <h2>Grad Amethyst</h2>
+                <p>Cel mai special grad de pe server.</p>
+            </div>
+            <div>
+                <p class="price">10 euro</p>
+                <button class="buy-btn" data-product="Grad Amethyst">Cumpără</button>
+            </div>
         </div>
     </div>
 </div>
 
-<!-- Secțiunea 3: Puncte (Points) -->
-<div id="points" class="store-section">
-    <div class="card">
-        <div>
-            <h2>100 Points</h2>
-            <p>Puncte pentru magazinul din joc.</p>
+<!-- SECȚIUNEA: KEY -->
+<div id="key-section" class="store-section">
+    <div class="back-btn-container">
+        <button class="back-btn" onclick="goHome()">⬅ Înapoi la meniu</button>
+    </div>
+    <h2>Chei Disponibile</h2>
+    <div class="container">
+        <div class="card">
+            <div>
+                <h2>Key Amethyst</h2>
+                <p>Cheie pentru cufărul Amethyst cu șanse mari.</p>
+            </div>
+            <div>
+                <p class="price">3 euro</p>
+                <button class="buy-btn" data-product="Key Amethyst">Cumpără</button>
+            </div>
         </div>
-        <div>
-            <p class="price">1 euro</p>
-            <button class="buy-btn" data-product="100 Points">Cumpără</button>
+        <div class="card">
+            <div>
+                <h2>Key Prime</h2>
+                <p>Cheie pentru cufărul Prime.</p>
+            </div>
+            <div>
+                <p class="price">1 euro</p>
+                <button class="buy-btn" data-product="Key Prime">Cumpără</button>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <h2>Key Crimson</h2>
+                <p>Cheie pentru cufărul Crimson.</p>
+            </div>
+            <div>
+                <p class="price">1 euro</p>
+                <button class="buy-btn" data-product="Key Crimson">Cumpără</button>
+            </div>
         </div>
     </div>
+</div>
 
-    <div class="card">
-        <div>
-            <h2>500 Points</h2>
-            <p>Puncte pentru magazinul din joc.</p>
-        </div>
-        <div>
-            <p class="price">3 euro</p>
-            <button class="buy-btn" data-product="500 Points">Cumpără</button>
-        </div>
+<!-- SECȚIUNEA: POINTS -->
+<div id="points-section" class="store-section">
+    <div class="back-btn-container">
+        <button class="back-btn" onclick="goHome()">⬅ Înapoi la meniu</button>
     </div>
-
-    <div class="card">
-        <div>
-            <h2>750 Points</h2>
-            <p>Puncte pentru magazinul din joc.</p>
+    <h2>Puncte Disponibile</h2>
+    <div class="container">
+        <div class="card">
+            <div>
+                <h2>100 Points</h2>
+                <p>Puncte pentru magazinul din joc.</p>
+            </div>
+            <div>
+                <p class="price">1 euro</p>
+                <button class="buy-btn" data-product="100 Points">Cumpără</button>
+            </div>
         </div>
-        <div>
-            <p class="price">5 euro</p>
-            <button class="buy-btn" data-product="750 Points">Cumpără</button>
+        <div class="card">
+            <div>
+                <h2>500 Points</h2>
+                <p>Puncte pentru magazinul din joc.</p>
+            </div>
+            <div>
+                <p class="price">3 euro</p>
+                <button class="buy-btn" data-product="500 Points">Cumpără</button>
+            </div>
         </div>
-    </div>
-
-    <div class="card">
-        <div>
-            <h2>1500 Points</h2>
-            <p>Puncte pentru magazinul din joc.</p>
+        <div class="card">
+            <div>
+                <h2>750 Points</h2>
+                <p>Puncte pentru magazinul din joc.</p>
+            </div>
+            <div>
+                <p class="price">5 euro</p>
+                <button class="buy-btn" data-product="750 Points">Cumpără</button>
+            </div>
         </div>
-        <div>
-            <p class="price">10 euro</p>
-            <button class="buy-btn" data-product="1500 Points">Cumpără</button>
+        <div class="card">
+            <div>
+                <h2>1500 Points</h2>
+                <p>Puncte pentru magazinul din joc.</p>
+            </div>
+            <div>
+                <p class="price">10 euro</p>
+                <button class="buy-btn" data-product="1500 Points">Cumpără</button>
+            </div>
         </div>
     </div>
 </div>
@@ -318,36 +360,37 @@ footer{
 </footer>
 
 <script>
-    // Funcție pentru schimbarea secțiunilor prin apăsare (Tab-uri)
-    function switchSection(sectionId) {
-        // Ascunde toate secțiunille
-        const sections = document.querySelectorAll(".store-section");
+    const mainMenu = document.getElementById("main-menu");
+    const sections = document.querySelectorAll(".store-section");
+
+    // Funcție pentru a deschide o secțiune anume
+    function openSection(name) {
+        mainMenu.style.display = "none";
         sections.forEach(sec => sec.classList.remove("active"));
+        document.getElementById(name + "-section").classList.add("active");
+    }
 
-        // Dezactivează toate butoanele din meniu
-        const buttons = document.querySelectorAll(".tab-btn");
-        buttons.forEach(btn => btn.classList.remove("active"));
-
-        // Activează secțiunea dorită și butonul apăsat
-        document.getElementById(sectionId).classList.add("active");
-        event.currentTarget.classList.add("active");
+    // Funcție pentru a te întoarce la meniul principal
+    function goHome() {
+        sections.forEach(sec => sec.classList.remove("active"));
+        mainMenu.style.display = "flex";
     }
 
     // Gestionare Modal și Plăți
     const modal = document.getElementById("paymentModal");
     const closeBtn = document.getElementById("closeModal");
-    const buyButtons = document.querySelectorAll(".buy-btn");
     const selectedProductText = document.getElementById("selectedProductText");
     const notification = document.getElementById("notification");
 
     let currentProduct = "";
 
-    buyButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            currentProduct = button.getAttribute("data-product");
+    // Folosim eveniment global pentru butoanele de cumpărare (funcționează și pentru elemente afișate dinamic)
+    document.addEventListener("click", (e) => {
+        if (e.target.classList.contains("buy-btn")) {
+            currentProduct = e.target.getAttribute("data-product");
             selectedProductText.textContent = `Produs: ${currentProduct}`;
             modal.style.display = "flex";
-        });
+        }
     });
 
     closeBtn.addEventListener("click", () => {
