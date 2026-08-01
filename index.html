@@ -19,12 +19,20 @@ header{
 h1{
     margin:0;
 }
+.section-title {
+    color: #8A2BE2;
+    margin-top: 40px;
+    font-size: 28px;
+    border-bottom: 2px solid #8A2BE2;
+    display: inline-block;
+    padding-bottom: 5px;
+}
 .container{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
     gap:20px;
-    padding:40px;
+    padding:20px 40px 40px 40px;
 }
 .card{
     background:#1f1f1f;
@@ -113,52 +121,81 @@ footer{
     <p>Susține serverul și primește recompense!</p>
 </header>
 
+<!-- Secțiunea: Grade -->
+<h2 class="section-title">Grade</h2>
 <div class="container">
+    <div class="card">
+        <h2>Grad OG</h2>
+        <p>Un grad exclusiv pentru jucătorii vechi.</p>
+        <p class="price">20 euro</p>
+        <button class="buy-btn">Cumpără</button>
+    </div>
 
-<div class="card">
-<h2>Grad OG</h2>
-<p>Un grad exclusiv pentru jucătorii vechi.</p>
-<p class="price">20 euro</p>
-<button class="buy-btn">Cumpără</button>
+    <div class="card">
+        <h2>Grad CPVP</h2>
+        <p class="price">5 euro</p>
+        <button class="buy-btn">Cumpără</button>
+    </div>
+
+    <div class="card">
+        <h2>Grad Amethyst</h2>
+        <p>Cel mai special grad de pe server.</p>
+        <p class="price">10 euro</p>
+        <button class="buy-btn">Cumpără</button>
+    </div>
 </div>
 
-<div class="card">
-<h2>Grad CPVP</h2>
-<p class="price">5 euro</p>
-<button class="buy-btn">Cumpără</button>
+<!-- Secțiunea: Chei (Keys) -->
+<h2 class="section-title">Chei / Keys</h2>
+<div class="container">
+    <div class="card">
+        <h2>Key Amethyst</h2>
+        <p>Cheie pentru cufărul Amethyst.</p>
+        <p class="price">3 euro</p>
+        <button class="buy-btn">Cumpără</button>
+    </div>
+
+    <div class="card">
+        <h2>Key Prime</h2>
+        <p>Cheie pentru cufărul Prime.</p>
+        <p class="price">1 euro</p>
+        <button class="buy-btn">Cumpără</button>
+    </div>
+
+    <div class="card">
+        <h2>Key Crimson</h2>
+        <p>Cheie pentru cufărul Crimson.</p>
+        <p class="price">1 euro</p>
+        <button class="buy-btn">Cumpără</button>
+    </div>
 </div>
 
-<div class="card">
-<h2>Grad Amethyst</h2>
-<p>Cel mai special grad de pe server.</p>
-<p class="price">10 euro</p>
-<button class="buy-btn">Cumpără</button>
-</div>
+<!-- Secțiunea: Puncte (Points) -->
+<h2 class="section-title">Puncte / Points</h2>
+<div class="container">
+    <div class="card">
+        <h2>100 Points</h2>
+        <p class="price">1 euro</p>
+        <button class="buy-btn">Cumpără</button>
+    </div>
 
-<div class="card">
-<h2>100 Points</h2>
-<p class="price">1 euro</p>
-<button class="buy-btn">Cumpără</button>
-</div>
+    <div class="card">
+        <h2>500 Points</h2>
+        <p class="price">3 euro</p>
+        <button class="buy-btn">Cumpără</button>
+    </div>
 
-<div class="card">
-<h2>500 Points</h2>
-<p class="price">3 euro</p>
-<button class="buy-btn">Cumpără</button>
-</div>
+    <div class="card">
+        <h2>750 Points</h2>
+        <p class="price">5 euro</p>
+        <button class="buy-btn">Cumpără</button>
+    </div>
 
-<div class="card">
-<h2>750 Points</h2>
-<p class="price">5 euro</p>
-<button class="buy-btn">Cumpără</button>
-</div>
-
-<div class="card">
-<h2>1500 Points</h2>
-<p class="price">10 euro</p>
-<button class="buy-btn">Cumpără</button>
-</div>
-
+    <div class="card">
+        <h2>1500 Points</h2>
+        <p class="price">10 euro</p>
+        <button class="buy-btn">Cumpără</button>
+    </div>
 </div>
 
 <div id="paymentModal" class="modal">
