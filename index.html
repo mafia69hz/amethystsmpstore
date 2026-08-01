@@ -19,21 +19,49 @@ header{
 h1{
     margin:0;
 }
-.section-title {
-    color: #8A2BE2;
-    margin-top: 40px;
-    font-size: 28px;
-    border-bottom: 2px solid #8A2BE2;
-    display: inline-block;
-    padding-bottom: 5px;
+
+/* --- Stiluri pentru meniurile de secțiuni (Tab-uri) --- */
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+    padding: 0 20px;
 }
-.container{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:20px;
-    padding:20px 40px 40px 40px;
+.tab-btn {
+    background: #1f1f1f;
+    color: #aaa;
+    border: 2px solid #333;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
 }
+.tab-btn:hover {
+    border-color: #8A2BE2;
+    color: white;
+}
+.tab-btn.active {
+    background: #8A2BE2;
+    color: white;
+    border-color: #8A2BE2;
+    box-shadow: 0 0 15px rgba(138,43,226,0.6);
+}
+
+/* --- Conținutul secțiunilor --- */
+.store-section {
+    display: none; /* Ascunse implicit */
+}
+.store-section.active {
+    display: flex; /* Afișată doar cea activă */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 40px 40px 40px;
+}
+
 .card{
     background:#1f1f1f;
     border-radius:12px;
@@ -65,14 +93,14 @@ button:hover{
 
 /* --- Stiluri pentru fereastra de plată (Modal) --- */
 .modal {
-    display: none; /* Ascunsă la început */
+    display: none;
     position: fixed;
     z-index: 100;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.7); /* Fundal întunecat transparent */
+    background-color: rgba(0,0,0,0.7);
     justify-content: center;
     align-items: center;
 }
@@ -125,7 +153,6 @@ button:hover{
     font-weight: bold;
     box-shadow: 0 0 15px rgba(0,255,153,0.5);
     z-index: 200;
-    animation: fadeInOut 3s ease;
 }
 
 footer{
@@ -142,9 +169,15 @@ footer{
     <p>Susține serverul și primește recompense!</p>
 </header>
 
-<!-- Secțiunea: Grade -->
-<h2 class="section-title">Grade</h2>
-<div class="container">
+<!-- Meniul cu cele 3 butoane de secțiuni -->
+<div class="nav-tabs">
+    <button class="tab-btn active" onclick="switchSection('grades')">🛡️ Grade</button>
+    <button class="tab-btn" onclick="switchSection('keys')">🔑 Chei (Keys)</button>
+    <button class="tab-btn" onclick="switchSection('points')">🪙 Puncte (Points)</button>
+</div>
+
+<!-- Secțiunea 1: Grade -->
+<div id="grades" class="store-section active">
     <div class="card">
         <div>
             <h2>Grad OG</h2>
@@ -179,9 +212,8 @@ footer{
     </div>
 </div>
 
-<!-- Secțiunea: Chei (Keys) -->
-<h2 class="section-title">Chei / Keys</h2>
-<div class="container">
+<!-- Secțiunea 2: Chei (Keys) -->
+<div id="keys" class="store-section">
     <div class="card">
         <div>
             <h2>Key Amethyst</h2>
@@ -216,9 +248,8 @@ footer{
     </div>
 </div>
 
-<!-- Secțiunea: Puncte (Points) -->
-<h2 class="section-title">Puncte / Points</h2>
-<div class="container">
+<!-- Secțiunea 3: Puncte (Points) -->
+<div id="points" class="store-section">
     <div class="card">
         <div>
             <h2>100 Points</h2>
@@ -287,6 +318,22 @@ footer{
 </footer>
 
 <script>
+    // Funcție pentru schimbarea secțiunilor prin apăsare (Tab-uri)
+    function switchSection(sectionId) {
+        // Ascunde toate secțiunille
+        const sections = document.querySelectorAll(".store-section");
+        sections.forEach(sec => sec.classList.remove("active"));
+
+        // Dezactivează toate butoanele din meniu
+        const buttons = document.querySelectorAll(".tab-btn");
+        buttons.forEach(btn => btn.classList.remove("active"));
+
+        // Activează secțiunea dorită și butonul apăsat
+        document.getElementById(sectionId).classList.add("active");
+        event.currentTarget.classList.add("active");
+    }
+
+    // Gestionare Modal și Plăți
     const modal = document.getElementById("paymentModal");
     const closeBtn = document.getElementById("closeModal");
     const buyButtons = document.querySelectorAll(".buy-btn");
@@ -295,7 +342,6 @@ footer{
 
     let currentProduct = "";
 
-    // Deschide fereastra și preia numele produsului
     buyButtons.forEach(button => {
         button.addEventListener("click", () => {
             currentProduct = button.getAttribute("data-product");
@@ -304,19 +350,16 @@ footer{
         });
     });
 
-    // Închide fereastra la click pe X
     closeBtn.addEventListener("click", () => {
         modal.style.display = "none";
     });
 
-    // Închide fereastra la click în afara ei
     window.addEventListener("click", (e) => {
         if (e.target === modal) {
             modal.style.display = "none";
         }
     });
 
-    // Funcție suplimentară pentru simularea unei plăți
     function completePayment(method) {
         modal.style.display = "none";
         notification.textContent = `Ai ales ${method} pentru ${currentProduct}! Mulțumiri!`;
