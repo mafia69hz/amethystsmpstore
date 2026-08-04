@@ -174,11 +174,37 @@ header p {
     transform: translateY(-5px);
 }
 
+.card-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin: 0 auto 15px auto;
+    filter: drop-shadow(0 0 8px rgba(153,50,204,0.6));
+}
+
 .card h2 {
     color: #f3e8ff;
     font-size: 22px;
     margin-top: 0;
     text-shadow: 0 0 8px rgba(153,50,204,0.6);
+}
+
+/* Stilizări speciale pentru grade */
+.title-og {
+    color: #ffcc00 !important;
+    font-size: 28px !important;
+    text-shadow: 0 0 12px rgba(255, 204, 0, 0.9) !important;
+    font-weight: 900;
+}
+
+.title-amethyst {
+    color: #da70d6 !important;
+    text-shadow: 0 0 10px rgba(153, 50, 204, 0.9) !important;
+}
+
+.title-cpvp {
+    color: #00bfff !important;
+    text-shadow: 0 0 10px rgba(0, 191, 255, 0.9) !important;
 }
 
 .card p {
@@ -235,6 +261,15 @@ button.buy-btn:hover{
     width: 340px;
     box-shadow: 0 0 35px rgba(0,255,204,0.5), 0 0 20px rgba(138,43,226,0.8);
     position: relative;
+}
+
+.modal-img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin: 0 auto 10px auto;
+    display: block;
+    filter: drop-shadow(0 0 10px rgba(0,255,204,0.6));
 }
 
 .modal-content h3 {
@@ -399,7 +434,8 @@ footer{
     <div class="container">
         <div class="card">
             <div>
-                <h2>Grad OG</h2>
+                <img src="https://i.imgur.com/3Z1089u.png" alt="Grad OG" class="card-img">
+                <h2 class="title-og">Grad OG</h2>
                 <p><strong>Beneficii:</strong><br>/kit<br>/grindstone<br>/repair<br>/anvil</p>
             </div>
             <div>
@@ -409,7 +445,8 @@ footer{
         </div>
         <div class="card">
             <div>
-                <h2>Grad CPVP</h2>
+                <img src="https://i.imgur.com/3Z1089u.png" alt="Grad CPVP" class="card-img">
+                <h2 class="title-cpvp">Grad CPVP</h2>
                 <p><strong>Beneficii:</strong><br>/kit<br>/grindstone<br>/repair<br>/anvil</p>
             </div>
             <div>
@@ -419,7 +456,8 @@ footer{
         </div>
         <div class="card">
             <div>
-                <h2>Grad Amethyst</h2>
+                <img src="https://i.imgur.com/3Z1089u.png" alt="Grad Amethyst" class="card-img">
+                <h2 class="title-amethyst">Grad Amethyst</h2>
                 <p><strong>Beneficii:</strong><br>/kit<br>/grindstone<br>/repair<br>/anvil</p>
             </div>
             <div>
@@ -438,6 +476,7 @@ footer{
     <div class="container">
         <div class="card">
             <div>
+                <img src="https://i.imgur.com/O61L29u.png" alt="Key Amethyst" class="card-img">
                 <h2>Key Amethyst</h2>
                 <p>Descuie cufărul legendar cu efecte mov neon.</p>
             </div>
@@ -448,6 +487,7 @@ footer{
         </div>
         <div class="card">
             <div>
+                <img src="https://i.imgur.com/O61L29u.png" alt="Key Prime" class="card-img">
                 <h2>Key Prime</h2>
                 <p>Cheie specială pentru recompense unice.</p>
             </div>
@@ -458,6 +498,7 @@ footer{
         </div>
         <div class="card">
             <div>
+                <img src="https://i.imgur.com/O61L29u.png" alt="Key Crimson" class="card-img">
                 <h2>Key Crimson</h2>
                 <p>Descuie arsenalul ascuns de luptă.</p>
             </div>
@@ -477,6 +518,7 @@ footer{
     <div class="container">
         <div class="card">
             <div>
+                <img src="https://i.imgur.com/40fZL1s.png" alt="100 Points" class="card-img">
                 <h2>100 Points</h2>
                 <p>Fonduri rapide pentru magazinul din joc.</p>
             </div>
@@ -487,6 +529,7 @@ footer{
         </div>
         <div class="card">
             <div>
+                <img src="https://i.imgur.com/40fZL1s.png" alt="500 Points" class="card-img">
                 <h2>500 Points</h2>
                 <p>Pachet avantajos de puncte pentru upgrade-uri.</p>
             </div>
@@ -497,6 +540,7 @@ footer{
         </div>
         <div class="card">
             <div>
+                <img src="https://i.imgur.com/40fZL1s.png" alt="750 Points" class="card-img">
                 <h2>750 Points</h2>
                 <p>Resurse extinse pentru dominație totală.</p>
             </div>
@@ -507,6 +551,7 @@ footer{
         </div>
         <div class="card">
             <div>
+                <img src="https://i.imgur.com/40fZL1s.png" alt="1500 Points" class="card-img">
                 <h2>1500 Points</h2>
                 <p>Pachetul clasic de puncte pentru upgrade-uri mari.</p>
             </div>
@@ -517,6 +562,7 @@ footer{
         </div>
         <div class="card">
             <div>
+                <img src="https://i.imgur.com/40fZL1s.png" alt="3000 Points" class="card-img">
                 <h2>3000 Points</h2>
                 <p>Rezerve masive pentru jucătorii avansați.</p>
             </div>
@@ -527,6 +573,7 @@ footer{
         </div>
         <div class="card">
             <div>
+                <img src="https://i.imgur.com/40fZL1s.png" alt="5000 Points" class="card-img">
                 <h2>5000 Points</h2>
                 <p>Pachetul suprem pentru supremație absolută.</p>
             </div>
@@ -546,6 +593,8 @@ footer{
     <div class="container">
         <div class="card">
             <div>
+                <!-- Imagine spawner cărbune (Coal Ore Spawner / Cărbune) -->
+                <img src="https://minecraft.wiki/images/Coal_Ore_JE3_BE2.png" alt="Cole x2" class="card-img">
                 <h2>Cole x2</h2>
                 <p>Spawner pentru producție de cărbune.</p>
             </div>
@@ -556,6 +605,8 @@ footer{
         </div>
         <div class="card">
             <div>
+                <!-- Imagine spawner fier (Iron Ore) -->
+                <img src="https://minecraft.wiki/images/Iron_Ore_JE3_BE3.png" alt="Spawner Iron" class="card-img">
                 <h2>Spawner Iron</h2>
                 <p>Spawner pentru producție de fier.</p>
             </div>
@@ -566,6 +617,8 @@ footer{
         </div>
         <div class="card">
             <div>
+                <!-- Imagine spawner aur (Gold Ore) -->
+                <img src="https://minecraft.wiki/images/Gold_Ore_JE4_BE3.png" alt="Spawner Gold" class="card-img">
                 <h2>Spawner Gold</h2>
                 <p>Spawner pentru resurse de aur.</p>
             </div>
@@ -576,6 +629,8 @@ footer{
         </div>
         <div class="card">
             <div>
+                <!-- Imagine spawner smarald (Emerald Ore) -->
+                <img src="https://minecraft.wiki/images/Emerald_Ore_JE3_BE3.png" alt="Spawner Emerald" class="card-img">
                 <h2>Spawner Emerald</h2>
                 <p>Spawner avansat pentru smaralde.</p>
             </div>
@@ -586,6 +641,8 @@ footer{
         </div>
         <div class="card">
             <div>
+                <!-- Imagine spawner diamant (Diamond Ore) -->
+                <img src="https://minecraft.wiki/images/Diamond_Ore_JE3_BE3.png" alt="Spawner Diamond" class="card-img">
                 <h2>Spawner Diamond</h2>
                 <p>Spawner suprem pentru diamante.</p>
             </div>
@@ -596,6 +653,8 @@ footer{
         </div>
         <div class="card">
             <div>
+                <!-- Imagine spawner netherite (Ancient Debris) -->
+                <img src="https://minecraft.wiki/images/Ancient_Debris_JE2_BE2.png" alt="Spawner Netherite" class="card-img">
                 <h2>Spawner Netherite</h2>
                 <p>Spawner ultra-rar pentru netherite.</p>
             </div>
@@ -611,6 +670,7 @@ footer{
 <div id="quantityModal" class="modal">
     <div class="modal-content">
         <span class="close-btn" id="closeQuantityModal">&times;</span>
+        <img id="qtyModalImg" src="" alt="Produs" class="modal-img">
         <h3>Alege cantitatea</h3>
         <p id="qtyProductText">Produs: -</p>
         
@@ -629,6 +689,7 @@ footer{
 <div id="paymentModal" class="modal">
     <div class="modal-content">
         <span class="close-btn" id="closePaymentModal">&times;</span>
+        <img id="payModalImg" src="" alt="Produs" class="modal-img">
         <h3>Metodă de plată</h3>
         <p id="paymentProductText">Produs: -</p>
         
@@ -667,23 +728,31 @@ footer{
 
     const qtyProductText = document.getElementById("qtyProductText");
     const paymentProductText = document.getElementById("paymentProductText");
+    const qtyModalImg = document.getElementById("qtyModalImg");
+    const payModalImg = document.getElementById("payModalImg");
+    
     const quantityInput = document.getElementById("productQuantity");
     const totalPriceText = document.getElementById("totalPriceText");
     const notification = document.getElementById("notification");
 
     let currentProduct = "";
     let unitPrice = 0;
+    let currentImgSrc = "";
 
-    // Apăsare pe butonul "Cumpără" din carduri
     document.addEventListener("click", (e) => {
         if (e.target.classList.contains("buy-btn")) {
             currentProduct = e.target.getAttribute("data-product");
             
             const card = e.target.closest(".card");
             const priceElement = card.querySelector(".price");
+            const imgElement = card.querySelector(".card-img");
+
             unitPrice = parseFloat(priceElement.getAttribute("data-raw-price"));
+            currentImgSrc = imgElement.src;
 
             qtyProductText.textContent = `Produs: ${currentProduct}`;
+            qtyModalImg.src = currentImgSrc;
+            
             quantityInput.value = 1;
             updateTotal();
             
@@ -704,26 +773,25 @@ footer{
         totalPriceText.textContent = `Total: ${total} euro`;
     }
 
-    // Trecerea de la fereastra de cantitate la cea de plată
     function goToPayment() {
         quantityModal.style.display = "none";
         const qty = quantityInput.value;
         const total = unitPrice * qty;
+        
         paymentProductText.textContent = `Produs: ${qty}x ${currentProduct} (${total} euro)`;
+        payModalImg.src = currentImgSrc;
+        
         paymentModal.style.display = "flex";
     }
 
-    // Închidere modal de cantitate
     closeQuantityModal.addEventListener("click", () => {
         quantityModal.style.display = "none";
     });
 
-    // Închidere modal de plată
     closePaymentModal.addEventListener("click", () => {
         paymentModal.style.display = "none";
     });
 
-    // Închidere la click în afara modalelor
     window.addEventListener("click", (e) => {
         if (e.target === quantityModal) {
             quantityModal.style.display = "none";
