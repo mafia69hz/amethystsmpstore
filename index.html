@@ -91,20 +91,6 @@ h1{
     overflow: hidden;
 }
 
-.menu-card img {
-    width: 45px;
-    height: 45px;
-    object-fit: contain;
-    margin-bottom: 10px;
-    filter: drop-shadow(0 0 8px rgba(153,50,204,0.8));
-    transition: 0.3s;
-}
-
-.menu-card:hover img {
-    transform: scale(1.15);
-    filter: drop-shadow(0 0 12px rgba(0,255,204,0.9));
-}
-
 .menu-card:hover {
     background: linear-gradient(145deg, #280a47, #48157a);
     border-color: #00ffcc;
@@ -145,14 +131,6 @@ h1{
     flex-direction: column;
     justify-content: space-between;
     transition: 0.3s;
-}
-
-.card img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    margin: 0 auto 15px auto;
-    filter: drop-shadow(0 0 8px rgba(138,43,226,0.7));
 }
 
 .card:hover {
@@ -364,19 +342,15 @@ footer{
 
 <div id="main-menu">
     <div class="menu-card" onclick="openSection('grad')">
-        <img src="https://i.imgur.com/8Q96aZ2.png" alt="Grad">
         <h2>Grad Amethyst</h2>
     </div>
     <div class="menu-card" onclick="openSection('key')">
-        <img src="https://i.imgur.com/Y3a5Z2n.png" alt="Key">
         <h2>Key Amethyst</h2>
     </div>
     <div class="menu-card" onclick="openSection('points')">
-        <img src="https://i.imgur.com/2Y4Z6Q1.png" alt="Points">
         <h2>500 Points</h2>
     </div>
     <div class="menu-card" onclick="openSection('spawner')">
-        <img src="https://i.imgur.com/7K98z1X.png" alt="Spawnere">
         <h2>Cadou Spawner</h2>
     </div>
 </div>
@@ -389,7 +363,6 @@ footer{
     <div class="container">
         <div class="card">
             <div>
-                <img src="https://i.imgur.com/8Q96aZ2.png" alt="Grad Amethyst">
                 <h2 class="title-amethyst">Grad Amethyst</h2>
                 <p><strong>Beneficii:</strong><br>/kit<br>/grindstone<br>/repair<br>/anvil</p>
             </div>
@@ -409,7 +382,6 @@ footer{
     <div class="container">
         <div class="card">
             <div>
-                <img src="https://i.imgur.com/Y3a5Z2n.png" alt="Key Amethyst">
                 <h2>Key Amethyst</h2>
                 <p>Descuie cufarul legendar cu efecte mov neon.</p>
             </div>
@@ -429,7 +401,6 @@ footer{
     <div class="container">
         <div class="card">
             <div>
-                <img src="https://i.imgur.com/2Y4Z6Q1.png" alt="500 Points">
                 <h2>500 Points</h2>
                 <p>Pachet avantajos de puncte pentru upgrade-uri.</p>
             </div>
@@ -449,7 +420,6 @@ footer{
     <div class="container">
         <div class="card">
             <div>
-                <img src="https://i.imgur.com/7K98z1X.png" alt="Spawner Cadou">
                 <h2>Spawner Cadou</h2>
                 <p>Un spawner surpriză oferit ca un cadou special.</p>
             </div>
