@@ -42,13 +42,6 @@ h1{
     letter-spacing: 2px;
 }
 
-header p {
-    margin: 10px 0 0 0;
-    color: #e0d1ff;
-    font-size: 16px;
-    text-shadow: 0 0 5px rgba(255,255,255,0.4);
-}
-
 .back-btn-container {
     margin: 25px 0;
 }
@@ -98,22 +91,6 @@ header p {
     overflow: hidden;
 }
 
-.menu-card::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(0deg, transparent, rgba(255,255,255,0.08), transparent);
-    transform: rotate(45deg);
-    transition: 0.5s;
-}
-
-.menu-card:hover::before {
-    top: 50%;
-}
-
 .menu-card:hover {
     background: linear-gradient(145deg, #280a47, #48157a);
     border-color: #00ffcc;
@@ -126,18 +103,11 @@ header p {
     font-size: 24px;
     color: #f3e8ff;
     text-shadow: 0 0 10px #9932CC;
-    letter-spacing: 1px;
 }
 
 .menu-icon {
     font-size: 45px;
     filter: drop-shadow(0 0 10px rgba(218,112,214,0.8));
-    animation: floatIcon 3s ease-in-out infinite;
-}
-
-@keyframes floatIcon {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
 }
 
 .store-section {
@@ -179,22 +149,20 @@ header p {
     height: 80px;
     object-fit: contain;
     margin: 0 auto 15px auto;
-    filter: drop-shadow(0 0 8px rgba(153,50,204,0.6));
+    filter: drop-shadow(0 0 10px rgba(153,50,204,0.7));
 }
 
 .card h2 {
-    color: #f3e8ff;
     font-size: 22px;
     margin-top: 0;
-    text-shadow: 0 0 8px rgba(153,50,204,0.6);
 }
 
-/* Stilizări speciale pentru grade */
+/* Culori cerute pentru grade */
 .title-og {
     color: #ffcc00 !important;
-    font-size: 28px !important;
+    font-size: 26px !important;
     text-shadow: 0 0 12px rgba(255, 204, 0, 0.9) !important;
-    font-weight: 900;
+    font-weight: bold;
 }
 
 .title-amethyst {
@@ -593,7 +561,6 @@ footer{
     <div class="container">
         <div class="card">
             <div>
-                <!-- Imagine spawner cărbune (Coal Ore Spawner / Cărbune) -->
                 <img src="https://minecraft.wiki/images/Coal_Ore_JE3_BE2.png" alt="Cole x2" class="card-img">
                 <h2>Cole x2</h2>
                 <p>Spawner pentru producție de cărbune.</p>
@@ -605,7 +572,6 @@ footer{
         </div>
         <div class="card">
             <div>
-                <!-- Imagine spawner fier (Iron Ore) -->
                 <img src="https://minecraft.wiki/images/Iron_Ore_JE3_BE3.png" alt="Spawner Iron" class="card-img">
                 <h2>Spawner Iron</h2>
                 <p>Spawner pentru producție de fier.</p>
@@ -617,7 +583,6 @@ footer{
         </div>
         <div class="card">
             <div>
-                <!-- Imagine spawner aur (Gold Ore) -->
                 <img src="https://minecraft.wiki/images/Gold_Ore_JE4_BE3.png" alt="Spawner Gold" class="card-img">
                 <h2>Spawner Gold</h2>
                 <p>Spawner pentru resurse de aur.</p>
@@ -629,7 +594,6 @@ footer{
         </div>
         <div class="card">
             <div>
-                <!-- Imagine spawner smarald (Emerald Ore) -->
                 <img src="https://minecraft.wiki/images/Emerald_Ore_JE3_BE3.png" alt="Spawner Emerald" class="card-img">
                 <h2>Spawner Emerald</h2>
                 <p>Spawner avansat pentru smaralde.</p>
@@ -641,7 +605,6 @@ footer{
         </div>
         <div class="card">
             <div>
-                <!-- Imagine spawner diamant (Diamond Ore) -->
                 <img src="https://minecraft.wiki/images/Diamond_Ore_JE3_BE3.png" alt="Spawner Diamond" class="card-img">
                 <h2>Spawner Diamond</h2>
                 <p>Spawner suprem pentru diamante.</p>
@@ -653,7 +616,6 @@ footer{
         </div>
         <div class="card">
             <div>
-                <!-- Imagine spawner netherite (Ancient Debris) -->
                 <img src="https://minecraft.wiki/images/Ancient_Debris_JE2_BE2.png" alt="Spawner Netherite" class="card-img">
                 <h2>Spawner Netherite</h2>
                 <p>Spawner ultra-rar pentru netherite.</p>
