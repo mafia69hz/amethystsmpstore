@@ -230,7 +230,7 @@ button.buy-btn:hover{
 .modal-content {
     background: linear-gradient(145deg, #150524, #2c0c4f);
     border: 2px solid #00ffcc;
-    padding: 35px;
+    padding: 30px;
     border-radius: 16px;
     width: 340px;
     box-shadow: 0 0 35px rgba(0,255,204,0.5), 0 0 20px rgba(138,43,226,0.8);
@@ -245,6 +245,41 @@ button.buy-btn:hover{
 
 .modal-content p {
     color: #c0b2db;
+    margin: 8px 0;
+}
+
+.quantity-container {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.quantity-container label {
+    font-size: 14px;
+    color: #e0d1ff;
+}
+
+.quantity-container input {
+    background: #12051f;
+    border: 2px solid #9932CC;
+    color: #00ffcc;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px;
+    width: 80px;
+    text-align: center;
+    border-radius: 8px;
+    outline: none;
+}
+
+.total-price {
+    color: #00ffcc;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 15px 0;
+    text-shadow: 0 0 8px rgba(0,255,204,0.6);
 }
 
 .close-btn {
@@ -265,14 +300,14 @@ button.buy-btn:hover{
 .payment-methods {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin-top: 20px;
+    gap: 10px;
+    margin-top: 15px;
 }
 
 .pay-btn {
     background: #12051f;
     border: 1px solid #7b2cbf;
-    padding: 14px;
+    padding: 12px;
     font-weight: bold;
     color: #e0d1ff;
     border-radius: 8px;
@@ -347,7 +382,7 @@ footer{
                 <p><strong>Beneficii:</strong><br>/kit<br>/grindstone<br>/repair<br>/anvil</p>
             </div>
             <div>
-                <p class="price">20 euro</p>
+                <p class="price" data-raw-price="20">20 euro</p>
                 <button class="buy-btn" data-product="Grad OG">Cumpără</button>
             </div>
         </div>
@@ -357,7 +392,7 @@ footer{
                 <p><strong>Beneficii:</strong><br>/kit<br>/grindstone<br>/repair<br>/anvil</p>
             </div>
             <div>
-                <p class="price">5 euro</p>
+                <p class="price" data-raw-price="5">5 euro</p>
                 <button class="buy-btn" data-product="Grad CPVP">Cumpără</button>
             </div>
         </div>
@@ -367,7 +402,7 @@ footer{
                 <p><strong>Beneficii:</strong><br>/kit<br>/grindstone<br>/repair<br>/anvil</p>
             </div>
             <div>
-                <p class="price">10 euro</p>
+                <p class="price" data-raw-price="10">10 euro</p>
                 <button class="buy-btn" data-product="Grad Amethyst">Cumpără</button>
             </div>
         </div>
@@ -386,7 +421,7 @@ footer{
                 <p>Descuie cufărul legendar cu efecte mov neon.</p>
             </div>
             <div>
-                <p class="price">3 euro</p>
+                <p class="price" data-raw-price="3">3 euro</p>
                 <button class="buy-btn" data-product="Key Amethyst">Cumpără</button>
             </div>
         </div>
@@ -396,7 +431,7 @@ footer{
                 <p>Cheie specială pentru recompense unice.</p>
             </div>
             <div>
-                <p class="price">1 euro</p>
+                <p class="price" data-raw-price="1">1 euro</p>
                 <button class="buy-btn" data-product="Key Prime">Cumpără</button>
             </div>
         </div>
@@ -406,7 +441,7 @@ footer{
                 <p>Descuie arsenalul ascuns de luptă.</p>
             </div>
             <div>
-                <p class="price">1 euro</p>
+                <p class="price" data-raw-price="1">1 euro</p>
                 <button class="buy-btn" data-product="Key Crimson">Cumpără</button>
             </div>
         </div>
@@ -425,7 +460,7 @@ footer{
                 <p>Fonduri rapide pentru magazinul din joc.</p>
             </div>
             <div>
-                <p class="price">1 euro</p>
+                <p class="price" data-raw-price="1">1 euro</p>
                 <button class="buy-btn" data-product="100 Points">Cumpără</button>
             </div>
         </div>
@@ -435,7 +470,7 @@ footer{
                 <p>Pachet avantajos de puncte pentru upgrade-uri.</p>
             </div>
             <div>
-                <p class="price">3 euro</p>
+                <p class="price" data-raw-price="3">3 euro</p>
                 <button class="buy-btn" data-product="500 Points">Cumpără</button>
             </div>
         </div>
@@ -445,7 +480,7 @@ footer{
                 <p>Resurse extinse pentru dominație totală.</p>
             </div>
             <div>
-                <p class="price">5 euro</p>
+                <p class="price" data-raw-price="5">5 euro</p>
                 <button class="buy-btn" data-product="750 Points">Cumpără</button>
             </div>
         </div>
@@ -455,7 +490,7 @@ footer{
                 <p>Pachetul clasic de puncte pentru upgrade-uri mari.</p>
             </div>
             <div>
-                <p class="price">10 euro</p>
+                <p class="price" data-raw-price="10">10 euro</p>
                 <button class="buy-btn" data-product="1500 Points">Cumpără</button>
             </div>
         </div>
@@ -465,7 +500,7 @@ footer{
                 <p>Rezerve masive pentru jucătorii avansați.</p>
             </div>
             <div>
-                <p class="price">15 euro</p>
+                <p class="price" data-raw-price="15">15 euro</p>
                 <button class="buy-btn" data-product="3000 Points">Cumpără</button>
             </div>
         </div>
@@ -475,7 +510,7 @@ footer{
                 <p>Pachetul suprem pentru supremație absolută.</p>
             </div>
             <div>
-                <p class="price">20 euro</p>
+                <p class="price" data-raw-price="20">20 euro</p>
                 <button class="buy-btn" data-product="5000 Points">Cumpără</button>
             </div>
         </div>
@@ -494,7 +529,7 @@ footer{
                 <p>Spawner pentru producție de cărbune.</p>
             </div>
             <div>
-                <p class="price">1 euro</p>
+                <p class="price" data-raw-price="1">1 euro</p>
                 <button class="buy-btn" data-product="Cole x2">Cumpără</button>
             </div>
         </div>
@@ -504,7 +539,7 @@ footer{
                 <p>Spawner pentru producție de fier.</p>
             </div>
             <div>
-                <p class="price">1 euro</p>
+                <p class="price" data-raw-price="1">1 euro</p>
                 <button class="buy-btn" data-product="Spawner Iron">Cumpără</button>
             </div>
         </div>
@@ -514,7 +549,7 @@ footer{
                 <p>Spawner pentru resurse de aur.</p>
             </div>
             <div>
-                <p class="price">1 euro</p>
+                <p class="price" data-raw-price="1">1 euro</p>
                 <button class="buy-btn" data-product="Spawner Gold">Cumpără</button>
             </div>
         </div>
@@ -524,7 +559,7 @@ footer{
                 <p>Spawner avansat pentru smaralde.</p>
             </div>
             <div>
-                <p class="price">2 euro</p>
+                <p class="price" data-raw-price="2">2 euro</p>
                 <button class="buy-btn" data-product="Spawner Emerald">Cumpără</button>
             </div>
         </div>
@@ -534,7 +569,7 @@ footer{
                 <p>Spawner suprem pentru diamante.</p>
             </div>
             <div>
-                <p class="price">3 euro</p>
+                <p class="price" data-raw-price="3">3 euro</p>
                 <button class="buy-btn" data-product="Spawner Diamond">Cumpără</button>
             </div>
         </div>
@@ -544,7 +579,7 @@ footer{
                 <p>Spawner ultra-rar pentru netherite.</p>
             </div>
             <div>
-                <p class="price">20 euro</p>
+                <p class="price" data-raw-price="20">20 euro</p>
                 <button class="buy-btn" data-product="Spawner Netherite">Cumpără</button>
             </div>
         </div>
@@ -554,11 +589,18 @@ footer{
 <div id="paymentModal" class="modal">
     <div class="modal-content">
         <span class="close-btn" id="closeModal">&times;</span>
-        <h3>Metodă de plată</h3>
-        <p id="selectedProductText">Pentru produsul selectat</p>
+        <h3>Finalizare comandă</h3>
+        <p id="selectedProductText">Produs: -</p>
+        
+        <div class="quantity-container">
+            <label for="productQuantity">Alege cantitatea:</label>
+            <input type="number" id="productQuantity" min="1" value="1">
+        </div>
+
+        <div class="total-price" id="totalPriceText">Total: 0 euro</div>
         
         <div class="payment-methods">
-            <button class="pay-btn" onclick="completePayment('Paysafecard')">🔑 Paysafecard</button>
+            <button class="pay-btn" onclick="completePayment('Paysafecard')">🔑 Plătește cu Paysafecard</button>
         </div>
     </div>
 </div>
@@ -587,17 +629,42 @@ footer{
     const modal = document.getElementById("paymentModal");
     const closeBtn = document.getElementById("closeModal");
     const selectedProductText = document.getElementById("selectedProductText");
+    const quantityInput = document.getElementById("productQuantity");
+    const totalPriceText = document.getElementById("totalPriceText");
     const notification = document.getElementById("notification");
 
     let currentProduct = "";
+    let unitPrice = 0;
 
     document.addEventListener("click", (e) => {
         if (e.target.classList.contains("buy-btn")) {
             currentProduct = e.target.getAttribute("data-product");
+            
+            // Extragem prețul bazei din elementul de preț asociat aceluiași card
+            const card = e.target.closest(".card");
+            const priceElement = card.querySelector(".price");
+            unitPrice = parseFloat(priceElement.getAttribute("data-raw-price"));
+
             selectedProductText.textContent = `Produs: ${currentProduct}`;
+            quantityInput.value = 1;
+            updateTotal();
+            
             modal.style.display = "flex";
         }
     });
+
+    quantityInput.addEventListener("input", () => {
+        if (quantityInput.value < 1 || quantityInput.value === "") {
+            quantityInput.value = 1;
+        }
+        updateTotal();
+    });
+
+    function updateTotal() {
+        const qty = parseInt(quantityInput.value);
+        const total = unitPrice * qty;
+        totalPriceText.textContent = `Total: ${total} euro`;
+    }
 
     closeBtn.addEventListener("click", () => {
         modal.style.display = "none";
@@ -610,13 +677,14 @@ footer{
     });
 
     function completePayment(method) {
+        const qty = quantityInput.value;
         modal.style.display = "none";
-        notification.textContent = `Ai ales ${method} pentru ${currentProduct}! Mulțumiri!`;
+        notification.textContent = `Ai comandat ${qty}x ${currentProduct} prin ${method}! Mulțumiri!`;
         notification.style.display = "block";
         
         setTimeout(() => {
             notification.style.display = "none";
-        }, 4000);
+        }, 4500);
     }
 </script>
 
