@@ -171,6 +171,27 @@ h1 {
     font-size: 14px;
 }
 
+/* Stil pentru iconița de spawner stilizată ca o miniatură 3D / Bloc Minecraft */
+.spawner-icon-box {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px auto;
+    background: #111;
+    border: 2px dashed #9932CC;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: inset 0 0 10px rgba(153,50,204,0.5);
+    animation: pulseSpawner 2s infinite alternate;
+}
+
+@keyframes pulseSpawner {
+    0% { border-color: #9932CC; box-shadow: inset 0 0 10px rgba(153,50,204,0.5); }
+    100% { border-color: #00ffcc; box-shadow: inset 0 0 20px rgba(0,255,204,0.8); }
+}
+
 .price {
     color: #00ffcc;
     font-size: 26px;
@@ -531,6 +552,7 @@ footer {
     <div class="container">
         <div class="card">
             <div>
+                <div class="spawner-icon-box">⚫</div>
                 <h2>Cole x2</h2>
                 <p>Spawner pentru producție de cărbune.</p>
             </div>
@@ -541,6 +563,7 @@ footer {
         </div>
         <div class="card">
             <div>
+                <div class="spawner-icon-box">⚙️</div>
                 <h2>Spawner Iron</h2>
                 <p>Spawner pentru producție de fier.</p>
             </div>
@@ -551,6 +574,7 @@ footer {
         </div>
         <div class="card">
             <div>
+                <div class="spawner-icon-box">🟡</div>
                 <h2>Spawner Gold</h2>
                 <p>Spawner pentru resurse de aur.</p>
             </div>
@@ -561,6 +585,7 @@ footer {
         </div>
         <div class="card">
             <div>
+                <div class="spawner-icon-box">🟢</div>
                 <h2>Spawner Emerald</h2>
                 <p>Spawner avansat pentru smaralde.</p>
             </div>
@@ -571,6 +596,7 @@ footer {
         </div>
         <div class="card">
             <div>
+                <div class="spawner-icon-box">💎</div>
                 <h2>Spawner Diamond</h2>
                 <p>Spawner suprem pentru diamante.</p>
             </div>
@@ -581,6 +607,7 @@ footer {
         </div>
         <div class="card">
             <div>
+                <div class="spawner-icon-box">🖤</div>
                 <h2>Spawner Netherite</h2>
                 <p>Spawner ultra-rar pentru netherite.</p>
             </div>
@@ -690,6 +717,7 @@ footer {
     }
 
     function goToPayment() {
+        quantityModal.style.display =- "none";
         quantityModal.style.display = "none";
         const qty = quantityInput.value;
         const total = unitPrice * qty;
