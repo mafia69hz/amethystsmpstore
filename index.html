@@ -282,6 +282,27 @@ button.buy-btn:hover{
     text-shadow: 0 0 8px rgba(0,255,204,0.6);
 }
 
+.next-step-btn {
+    background: linear-gradient(135deg, #7b2cbf, #00ffcc);
+    color: #07020d;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(0,255,204,0.5);
+    margin-top: 10px;
+}
+
+.next-step-btn:hover {
+    background: #00ffcc;
+    box-shadow: 0 0 25px rgba(0,255,204,0.9);
+    transform: scale(1.02);
+}
+
 .close-btn {
     position: absolute;
     right: 15px;
@@ -586,21 +607,33 @@ footer{
     </div>
 </div>
 
-<div id="paymentModal" class="modal">
+<!-- Fereastra 1: Alegere Cantitate -->
+<div id="quantityModal" class="modal">
     <div class="modal-content">
-        <span class="close-btn" id="closeModal">&times;</span>
-        <h3>Finalizare comandă</h3>
-        <p id="selectedProductText">Produs: -</p>
+        <span class="close-btn" id="closeQuantityModal">&times;</span>
+        <h3>Alege cantitatea</h3>
+        <p id="qtyProductText">Produs: -</p>
         
         <div class="quantity-container">
-            <label for="productQuantity">Alege cantitatea:</label>
+            <label for="productQuantity">Număr de bucăți:</label>
             <input type="number" id="productQuantity" min="1" value="1">
         </div>
 
         <div class="total-price" id="totalPriceText">Total: 0 euro</div>
         
+        <button class="next-step-btn" onclick="goToPayment()">Continuă spre plată</button>
+    </div>
+</div>
+
+<!-- Fereastra 2: Metodă de plată -->
+<div id="paymentModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="closePaymentModal">&times;</span>
+        <h3>Metodă de plată</h3>
+        <p id="paymentProductText">Produs: -</p>
+        
         <div class="payment-methods">
-            <button class="pay-btn" onclick="completePayment('Paysafecard')">🔑 Plătește cu Paysafecard</button>
+            <button class="pay-btn" onclick="completePayment('Paysafecard')">🔑 Paysafecard</button>
         </div>
     </div>
 </div>
@@ -626,9 +659,14 @@ footer{
         mainMenu.style.display = "flex";
     }
 
-    const modal = document.getElementById("paymentModal");
-    const closeBtn = document.getElementById("closeModal");
-    const selectedProductText = document.getElementById("selectedProductText");
+    const quantityModal = document.getElementById("quantityModal");
+    const paymentModal = document.getElementById("paymentModal");
+    
+    const closeQuantityModal = document.getElementById("closeQuantityModal");
+    const closePaymentModal = document.getElementById("closePaymentModal");
+
+    const qtyProductText = document.getElementById("qtyProductText");
+    const paymentProductText = document.getElementById("paymentProductText");
     const quantityInput = document.getElementById("productQuantity");
     const totalPriceText = document.getElementById("totalPriceText");
     const notification = document.getElementById("notification");
@@ -636,20 +674,20 @@ footer{
     let currentProduct = "";
     let unitPrice = 0;
 
+    // Apăsare pe butonul "Cumpără" din carduri
     document.addEventListener("click", (e) => {
         if (e.target.classList.contains("buy-btn")) {
             currentProduct = e.target.getAttribute("data-product");
             
-            // Extragem prețul bazei din elementul de preț asociat aceluiași card
             const card = e.target.closest(".card");
             const priceElement = card.querySelector(".price");
             unitPrice = parseFloat(priceElement.getAttribute("data-raw-price"));
 
-            selectedProductText.textContent = `Produs: ${currentProduct}`;
+            qtyProductText.textContent = `Produs: ${currentProduct}`;
             quantityInput.value = 1;
             updateTotal();
             
-            modal.style.display = "flex";
+            quantityModal.style.display = "flex";
         }
     });
 
@@ -666,19 +704,38 @@ footer{
         totalPriceText.textContent = `Total: ${total} euro`;
     }
 
-    closeBtn.addEventListener("click", () => {
-        modal.style.display = "none";
+    // Trecerea de la fereastra de cantitate la cea de plată
+    function goToPayment() {
+        quantityModal.style.display = "none";
+        const qty = quantityInput.value;
+        const total = unitPrice * qty;
+        paymentProductText.textContent = `Produs: ${qty}x ${currentProduct} (${total} euro)`;
+        paymentModal.style.display = "flex";
+    }
+
+    // Închidere modal de cantitate
+    closeQuantityModal.addEventListener("click", () => {
+        quantityModal.style.display = "none";
     });
 
+    // Închidere modal de plată
+    closePaymentModal.addEventListener("click", () => {
+        paymentModal.style.display = "none";
+    });
+
+    // Închidere la click în afara modalelor
     window.addEventListener("click", (e) => {
-        if (e.target === modal) {
-            modal.style.display = "none";
+        if (e.target === quantityModal) {
+            quantityModal.style.display = "none";
+        }
+        if (e.target === paymentModal) {
+            paymentModal.style.display = "none";
         }
     });
 
     function completePayment(method) {
         const qty = quantityInput.value;
-        modal.style.display = "none";
+        paymentModal.style.display = "none";
         notification.textContent = `Ai comandat ${qty}x ${currentProduct} prin ${method}! Mulțumiri!`;
         notification.style.display = "block";
         
