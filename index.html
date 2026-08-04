@@ -166,21 +166,9 @@ h1{
     margin-top: 0;
 }
 
-.title-og {
-    color: #ffcc00 !important;
-    font-size: 26px !important;
-    text-shadow: 0 0 12px rgba(255, 204, 0, 0.9) !important;
-    font-weight: bold;
-}
-
 .title-amethyst {
     color: #da70d6 !important;
     text-shadow: 0 0 10px rgba(153, 50, 204, 0.9) !important;
-}
-
-.title-cpvp {
-    color: #00bfff !important;
-    text-shadow: 0 0 10px rgba(0, 191, 255, 0.9) !important;
 }
 
 .card p {
@@ -214,44 +202,6 @@ button.buy-btn:hover{
     color: #07020d;
     box-shadow: 0 0 25px rgba(0,255,204,0.8);
     transform: scale(1.03);
-}
-
-/* Stiluri pentru Galerie / Poze */
-.gallery-card {
-    background: linear-gradient(145deg, #12051f, #1e0933);
-    border: 2px solid #6b18bc;
-    border-radius: 16px;
-    overflow: hidden;
-    width: 280px;
-    box-shadow: 0 0 20px rgba(107,24,188,0.5);
-    transition: 0.3s;
-    display: flex;
-    flex-direction: column;
-}
-
-.gallery-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-bottom: 2px solid #6b18bc;
-    transition: 0.4s;
-}
-
-.gallery-card:hover img {
-    transform: scale(1.08);
-}
-
-.gallery-card:hover {
-    border-color: #00ffcc;
-    box-shadow: 0 0 30px rgba(0,255,204,0.5), 0 0 15px rgba(138,43,226,0.8);
-    transform: translateY(-5px);
-}
-
-.gallery-card p {
-    padding: 15px;
-    margin: 0;
-    color: #e0d1ff;
-    font-size: 14px;
 }
 
 .modal {
@@ -415,24 +365,19 @@ footer{
 <div id="main-menu">
     <div class="menu-card" onclick="openSection('grad')">
         <img src="https://i.imgur.com/8Q96aZ2.png" alt="Grad">
-        <h2>Grad</h2>
+        <h2>Grad Amethyst</h2>
     </div>
     <div class="menu-card" onclick="openSection('key')">
         <img src="https://i.imgur.com/Y3a5Z2n.png" alt="Key">
-        <h2>Key</h2>
+        <h2>Key Amethyst</h2>
     </div>
     <div class="menu-card" onclick="openSection('points')">
         <img src="https://i.imgur.com/2Y4Z6Q1.png" alt="Points">
-        <h2>Points</h2>
+        <h2>500 Points</h2>
     </div>
     <div class="menu-card" onclick="openSection('spawner')">
         <img src="https://i.imgur.com/7K98z1X.png" alt="Spawnere">
-        <h2>Spawnere</h2>
-    </div>
-    <!-- Buton Nou pentru Poze/Galerie -->
-    <div class="menu-card" onclick="openSection('poze')">
-        <img src="https://i.imgur.com/8Q96aZ2.png" alt="Poze">
-        <h2>Poze</h2>
+        <h2>Cadou Spawner</h2>
     </div>
 </div>
 
@@ -440,30 +385,8 @@ footer{
     <div class="back-btn-container">
         <button class="back-btn" onclick="goHome()">Inapoi la meniu</button>
     </div>
-    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Grade Legendare</h2>
+    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Grad Amethyst</h2>
     <div class="container">
-        <div class="card">
-            <div>
-                <img src="https://i.imgur.com/8Q96aZ2.png" alt="Grad OG">
-                <h2 class="title-og">Grad OG</h2>
-                <p><strong>Beneficii:</strong><br>/kit<br>/grindstone<br>/repair<br>/anvil</p>
-            </div>
-            <div>
-                <p class="price" data-raw-price="20">20 euro</p>
-                <button class="buy-btn" data-product="Grad OG">Cumpara</button>
-            </div>
-        </div>
-        <div class="card">
-            <div>
-                <img src="https://i.imgur.com/8Q96aZ2.png" alt="Grad CPVP">
-                <h2 class="title-cpvp">Grad CPVP</h2>
-                <p><strong>Beneficii:</strong><br>/kit<br>/grindstone<br>/repair<br>/anvil</p>
-            </div>
-            <div>
-                <p class="price" data-raw-price="5">5 euro</p>
-                <button class="buy-btn" data-product="Grad CPVP">Cumpara</button>
-            </div>
-        </div>
         <div class="card">
             <div>
                 <img src="https://i.imgur.com/8Q96aZ2.png" alt="Grad Amethyst">
@@ -482,7 +405,7 @@ footer{
     <div class="back-btn-container">
         <button class="back-btn" onclick="goHome()">Inapoi la meniu</button>
     </div>
-    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Chei de Cufar</h2>
+    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Cheie de Cufar</h2>
     <div class="container">
         <div class="card">
             <div>
@@ -495,28 +418,6 @@ footer{
                 <button class="buy-btn" data-product="Key Amethyst">Cumpara</button>
             </div>
         </div>
-        <div class="card">
-            <div>
-                <img src="https://i.imgur.com/Y3a5Z2n.png" alt="Key Prime">
-                <h2>Key Prime</h2>
-                <p>Cheie speciala pentru recompense unice.</p>
-            </div>
-            <div>
-                <p class="price" data-raw-price="1">1 euro</p>
-                <button class="buy-btn" data-product="Key Prime">Cumpara</button>
-            </div>
-        </div>
-        <div class="card">
-            <div>
-                <img src="https://i.imgur.com/Y3a5Z2n.png" alt="Key Crimson">
-                <h2>Key Crimson</h2>
-                <p>Descuie arsenalul ascuns de lupta.</p>
-            </div>
-            <div>
-                <p class="price" data-raw-price="1">1 euro</p>
-                <button class="buy-btn" data-product="Key Crimson">Cumpara</button>
-            </div>
-        </div>
     </div>
 </div>
 
@@ -524,19 +425,8 @@ footer{
     <div class="back-btn-container">
         <button class="back-btn" onclick="goHome()">Inapoi la meniu</button>
     </div>
-    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Pachete de Diamante / Puncte</h2>
+    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Pachet Puncte</h2>
     <div class="container">
-        <div class="card">
-            <div>
-                <img src="https://i.imgur.com/2Y4Z6Q1.png" alt="100 Points">
-                <h2>100 Points</h2>
-                <p>Fonduri rapide pentru magazinul din joc.</p>
-            </div>
-            <div>
-                <p class="price" data-raw-price="1">1 euro</p>
-                <button class="buy-btn" data-product="100 Points">Cumpara</button>
-            </div>
-        </div>
         <div class="card">
             <div>
                 <img src="https://i.imgur.com/2Y4Z6Q1.png" alt="500 Points">
@@ -548,50 +438,6 @@ footer{
                 <button class="buy-btn" data-product="500 Points">Cumpara</button>
             </div>
         </div>
-        <div class="card">
-            <div>
-                <img src="https://i.imgur.com/2Y4Z6Q1.png" alt="750 Points">
-                <h2>750 Points</h2>
-                <p>Resurse extinse pentru dominatie totala.</p>
-            </div>
-            <div>
-                <p class="price" data-raw-price="5">5 euro</p>
-                <button class="buy-btn" data-product="750 Points">Cumpara</button>
-            </div>
-        </div>
-        <div class="card">
-            <div>
-                <img src="https://i.imgur.com/2Y4Z6Q1.png" alt="1500 Points">
-                <h2>1500 Points</h2>
-                <p>Pachetul clasic de puncte pentru upgrade-uri mari.</p>
-            </div>
-            <div>
-                <p class="price" data-raw-price="10">10 euro</p>
-                <button class="buy-btn" data-product="1500 Points">Cumpara</button>
-            </div>
-        </div>
-        <div class="card">
-            <div>
-                <img src="https://i.imgur.com/2Y4Z6Q1.png" alt="3000 Points">
-                <h2>3000 Points</h2>
-                <p>Rezerve masive pentru jucatorii avansati.</p>
-            </div>
-            <div>
-                <p class="price" data-raw-price="15">15 euro</p>
-                <button class="buy-btn" data-product="3000 Points">Cumpara</button>
-            </div>
-        </div>
-        <div class="card">
-            <div>
-                <img src="https://i.imgur.com/2Y4Z6Q1.png" alt="5000 Points">
-                <h2>5000 Points</h2>
-                <p>Pachetul suprem pentru suprematie absoluta.</p>
-            </div>
-            <div>
-                <p class="price" data-raw-price="20">20 euro</p>
-                <button class="buy-btn" data-product="5000 Points">Cumpara</button>
-            </div>
-        </div>
     </div>
 </div>
 
@@ -599,98 +445,18 @@ footer{
     <div class="back-btn-container">
         <button class="back-btn" onclick="goHome()">Inapoi la meniu</button>
     </div>
-    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Spawnere</h2>
+    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Cadou Spawner</h2>
     <div class="container">
         <div class="card">
             <div>
-                <img src="https://i.imgur.com/7K98z1X.png" alt="Cole x2">
-                <h2>Cole x2</h2>
-                <p>Spawner pentru productie de carbune.</p>
+                <img src="https://i.imgur.com/7K98z1X.png" alt="Spawner Cadou">
+                <h2>Spawner Cadou</h2>
+                <p>Un spawner surpriză oferit ca un cadou special.</p>
             </div>
             <div>
-                <p class="price" data-raw-price="1">1 euro</p>
-                <button class="buy-btn" data-product="Cole x2">Cumpara</button>
+                <p class="price" data-raw-price="0">Gratuit</p>
+                <button class="buy-btn" data-product="Spawner Cadou">Revendica</button>
             </div>
-        </div>
-        <div class="card">
-            <div>
-                <img src="https://i.imgur.com/7K98z1X.png" alt="Spawner Iron">
-                <h2>Spawner Iron</h2>
-                <p>Spawner pentru productie de fier.</p>
-            </div>
-            <div>
-                <p class="price" data-raw-price="1">1 euro</p>
-                <button class="buy-btn" data-product="Spawner Iron">Cumpara</button>
-            </div>
-        </div>
-        <div class="card">
-            <div>
-                <img src="https://i.imgur.com/7K98z1X.png" alt="Spawner Gold">
-                <h2>Spawner Gold</h2>
-                <p>Spawner pentru resurse de aur.</p>
-            </div>
-            <div>
-                <p class="price" data-raw-price="1">1 euro</p>
-                <button class="buy-btn" data-product="Spawner Gold">Cumpara</button>
-            </div>
-        </div>
-        <div class="card">
-            <div>
-                <img src="https://i.imgur.com/7K98z1X.png" alt="Spawner Emerald">
-                <h2>Spawner Emerald</h2>
-                <p>Spawner avansat pentru smaralde.</p>
-            </div>
-            <div>
-                <p class="price" data-raw-price="2">2 euro</p>
-                <button class="buy-btn" data-product="Spawner Emerald">Cumpara</button>
-            </div>
-        </div>
-        <div class="card">
-            <div>
-                <img src="https://i.imgur.com/7K98z1X.png" alt="Spawner Diamond">
-                <h2>Spawner Diamond</h2>
-                <p>Spawner suprem pentru diamante.</p>
-            </div>
-            <div>
-                <p class="price" data-raw-price="3">3 euro</p>
-                <button class="buy-btn" data-product="Spawner Diamond">Cumpara</button>
-            </div>
-        </div>
-        <div class="card">
-            <div>
-                <img src="https://i.imgur.com/7K98z1X.png" alt="Spawner Netherite">
-                <h2>Spawner Netherite</h2>
-                <p>Spawner ultra-rar pentru netherite.</p>
-            </div>
-            <div>
-                <p class="price" data-raw-price="20">20 euro</p>
-                <button class="buy-btn" data-product="Spawner Netherite">Cumpara</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Secțiunea Nouă de Poze / Galerie -->
-<div id="poze-section" class="store-section">
-    <div class="back-btn-container">
-        <button class="back-btn" onclick="goHome()">Inapoi la meniu</button>
-    </div>
-    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Galeria Serverului</h2>
-    <div class="container">
-        <!-- Poza 1 -->
-        <div class="gallery-card">
-            <img src="https://i.imgur.com/8Q96aZ2.png" alt="Spawn Server">
-            <p><strong>Spawn-ul principal</strong><br>Locul de unde începe aventura pe AmethystSMP.</p>
-        </div>
-        <!-- Poza 2 -->
-        <div class="gallery-card">
-            <img src="https://i.imgur.com/Y3a5Z2n.png" alt="Zona PvP">
-            <p><strong>Arena PvP</strong><br>Zona unde te poți lupta cu ceilalți jucători.</p>
-        </div>
-        <!-- Poza 3 -->
-        <div class="gallery-card">
-            <img src="https://i.imgur.com/2Y4Z6Q1.png" alt="Cufere Legendare">
-            <p><strong>Camera Cufere</strong><br>Unde îți poți încerca norocul cu cheile.</p>
         </div>
     </div>
 </div>
@@ -789,7 +555,7 @@ footer{
     function updateTotal() {
         const qty = parseInt(quantityInput.value);
         const total = unitPrice * qty;
-        totalPriceText.textContent = `Total: ${total} euro`;
+        totalPriceText.textContent = unitPrice === 0 ? `Total: Gratuit` : `Total: ${total} euro`;
     }
 
     function goToPayment() {
@@ -797,7 +563,7 @@ footer{
         const qty = quantityInput.value;
         const total = unitPrice * qty;
         
-        paymentProductText.textContent = `Produs: ${qty}x ${currentProduct} (${total} euro)`;
+        paymentProductText.textContent = unitPrice === 0 ? `Produs: ${qty}x ${currentProduct} (Gratuit)` : `Produs: ${qty}x ${currentProduct} (${total} euro)`;
         
         paymentModal.style.display = "flex";
     }
@@ -822,7 +588,7 @@ footer{
     function completePayment(method) {
         const qty = quantityInput.value;
         paymentModal.style.display = "none";
-        notification.textContent = `Ai comandat ${qty}x ${currentProduct} prin ${method}! Multumiri!`;
+        notification.textContent = unitPrice === 0 ? `Ai revendicat cadoul ${qty}x ${currentProduct}! Multumiri!` : `Ai comandat ${qty}x ${currentProduct} prin ${method}! Multumiri!`;
         notification.style.display = "block";
         
         setTimeout(() => {
