@@ -144,7 +144,6 @@ h1{
     transform: translateY(-5px);
 }
 
-/* Container fix pentru imagini ca să nu mai iasă din card */
 .card-img-container {
     width: 80px;
     height: 80px;
@@ -166,7 +165,6 @@ h1{
     margin-top: 0;
 }
 
-/* Culori pentru grade */
 .title-og {
     color: #ffcc00 !important;
     font-size: 26px !important;
@@ -411,7 +409,6 @@ footer{
     <div class="container">
         <div class="card">
             <div>
-                <div class="card-img-container"><img src="https://i.imgur.com/3Z1089u.png" alt="Grad OG" class="card-img"></div>
                 <h2 class="title-og">Grad OG</h2>
                 <p><strong>Beneficii:</strong><br>/kit<br>/grindstone<br>/repair<br>/anvil</p>
             </div>
@@ -422,7 +419,6 @@ footer{
         </div>
         <div class="card">
             <div>
-                <div class="card-img-container"><img src="https://i.imgur.com/3Z1089u.png" alt="Grad CPVP" class="card-img"></div>
                 <h2 class="title-cpvp">Grad CPVP</h2>
                 <p><strong>Beneficii:</strong><br>/kit<br>/grindstone<br>/repair<br>/anvil</p>
             </div>
@@ -433,7 +429,6 @@ footer{
         </div>
         <div class="card">
             <div>
-                <div class="card-img-container"><img src="https://i.imgur.com/3Z1089u.png" alt="Grad Amethyst" class="card-img"></div>
                 <h2 class="title-amethyst">Grad Amethyst</h2>
                 <p><strong>Beneficii:</strong><br>/kit<br>/grindstone<br>/repair<br>/anvil</p>
             </div>
@@ -453,7 +448,6 @@ footer{
     <div class="container">
         <div class="card">
             <div>
-                <div class="card-img-container"><img src="https://i.imgur.com/O61L29u.png" alt="Key Amethyst" class="card-img"></div>
                 <h2>Key Amethyst</h2>
                 <p>Descuie cufărul legendar cu efecte mov neon.</p>
             </div>
@@ -464,7 +458,6 @@ footer{
         </div>
         <div class="card">
             <div>
-                <div class="card-img-container"><img src="https://i.imgur.com/O61L29u.png" alt="Key Prime" class="card-img"></div>
                 <h2>Key Prime</h2>
                 <p>Cheie specială pentru recompense unice.</p>
             </div>
@@ -475,7 +468,6 @@ footer{
         </div>
         <div class="card">
             <div>
-                <div class="card-img-container"><img src="https://i.imgur.com/O61L29u.png" alt="Key Crimson" class="card-img"></div>
                 <h2>Key Crimson</h2>
                 <p>Descuie arsenalul ascuns de luptă.</p>
             </div>
@@ -495,7 +487,6 @@ footer{
     <div class="container">
         <div class="card">
             <div>
-                <div class="card-img-container"><img src="https://i.imgur.com/40fZL1s.png" alt="100 Points" class="card-img"></div>
                 <h2>100 Points</h2>
                 <p>Fonduri rapide pentru magazinul din joc.</p>
             </div>
@@ -506,7 +497,6 @@ footer{
         </div>
         <div class="card">
             <div>
-                <div class="card-img-container"><img src="https://i.imgur.com/40fZL1s.png" alt="500 Points" class="card-img"></div>
                 <h2>500 Points</h2>
                 <p>Pachet avantajos de puncte pentru upgrade-uri.</p>
             </div>
@@ -517,7 +507,6 @@ footer{
         </div>
         <div class="card">
             <div>
-                <div class="card-img-container"><img src="https://i.imgur.com/40fZL1s.png" alt="750 Points" class="card-img"></div>
                 <h2>750 Points</h2>
                 <p>Resurse extinse pentru dominație totală.</p>
             </div>
@@ -528,7 +517,6 @@ footer{
         </div>
         <div class="card">
             <div>
-                <div class="card-img-container"><img src="https://i.imgur.com/40fZL1s.png" alt="1500 Points" class="card-img"></div>
                 <h2>1500 Points</h2>
                 <p>Pachetul clasic de puncte pentru upgrade-uri mari.</p>
             </div>
@@ -539,7 +527,6 @@ footer{
         </div>
         <div class="card">
             <div>
-                <div class="card-img-container"><img src="https://i.imgur.com/40fZL1s.png" alt="3000 Points" class="card-img"></div>
                 <h2>3000 Points</h2>
                 <p>Rezerve masive pentru jucătorii avansați.</p>
             </div>
@@ -550,7 +537,6 @@ footer{
         </div>
         <div class="card">
             <div>
-                <div class="card-img-container"><img src="https://i.imgur.com/40fZL1s.png" alt="5000 Points" class="card-img"></div>
                 <h2>5000 Points</h2>
                 <p>Pachetul suprem pentru supremație absolută.</p>
             </div>
@@ -562,7 +548,7 @@ footer{
     </div>
 </div>
 
-<div id="spawner-section" class="store-section active">
+<div id="spawner-section" class="store-section">
     <div class="back-btn-container">
         <button class="back-btn" onclick="goHome()">⬅ Înapoi la meniu</button>
     </div>
@@ -641,7 +627,7 @@ footer{
 <div id="quantityModal" class="modal">
     <div class="modal-content">
         <span class="close-btn" id="closeQuantityModal">&times;</span>
-        <img id="qtyModalImg" src="" alt="Produs" class="modal-img">
+        <img id="qtyModalImg" src="" alt="Produs" class="modal-img" style="display: none;">
         <h3>Alege cantitatea</h3>
         <p id="qtyProductText">Produs: -</p>
         
@@ -660,7 +646,7 @@ footer{
 <div id="paymentModal" class="modal">
     <div class="modal-content">
         <span class="close-btn" id="closePaymentModal">&times;</span>
-        <img id="payModalImg" src="" alt="Produs" class="modal-img">
+        <img id="payModalImg" src="" alt="Produs" class="modal-img" style="display: none;">
         <h3>Metodă de plată</h3>
         <p id="paymentProductText">Produs: -</p>
         
@@ -709,6 +695,7 @@ footer{
     let currentProduct = "";
     let unitPrice = 0;
     let currentImgSrc = "";
+    let hasImage = false;
 
     document.addEventListener("click", (e) => {
         if (e.target.classList.contains("buy-btn")) {
@@ -719,10 +706,22 @@ footer{
             const imgElement = card.querySelector(".card-img");
 
             unitPrice = parseFloat(priceElement.getAttribute("data-raw-price"));
-            currentImgSrc = imgElement.src;
+            
+            if (imgElement) {
+                currentImgSrc = imgElement.src;
+                hasImage = true;
+            } else {
+                hasImage = false;
+            }
 
             qtyProductText.textContent = `Produs: ${currentProduct}`;
-            qtyModalImg.src = currentImgSrc;
+            
+            if (hasImage) {
+                qtyModalImg.src = currentImgSrc;
+                qtyModalImg.style.display = "block";
+            } else {
+                qtyModalImg.style.display = "none";
+            }
             
             quantityInput.value = 1;
             updateTotal();
@@ -750,7 +749,13 @@ footer{
         const total = unitPrice * qty;
         
         paymentProductText.textContent = `Produs: ${qty}x ${currentProduct} (${total} euro)`;
-        payModalImg.src = currentImgSrc;
+        
+        if (hasImage) {
+            payModalImg.src = currentImgSrc;
+            payModalImg.style.display = "block";
+        } else {
+            payModalImg.style.display = "none";
+        }
         
         paymentModal.style.display = "flex";
     }
