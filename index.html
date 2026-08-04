@@ -100,7 +100,7 @@ h1{
 
 .menu-card h2 {
     margin: 0;
-    font-size: 22px;
+    font-size: 24px;
     color: #f3e8ff;
     text-shadow: 0 0 10px #9932CC;
 }
@@ -144,9 +144,21 @@ h1{
     margin-top: 0;
 }
 
+.title-og {
+    color: #ffcc00 !important;
+    font-size: 26px !important;
+    text-shadow: 0 0 12px rgba(255, 204, 0, 0.9) !important;
+    font-weight: bold;
+}
+
 .title-amethyst {
     color: #da70d6 !important;
     text-shadow: 0 0 10px rgba(153, 50, 204, 0.9) !important;
+}
+
+.title-cpvp {
+    color: #00bfff !important;
+    text-shadow: 0 0 10px rgba(0, 191, 255, 0.9) !important;
 }
 
 .card p {
@@ -342,16 +354,16 @@ footer{
 
 <div id="main-menu">
     <div class="menu-card" onclick="openSection('grad')">
-        <h2>Grad Amethyst</h2>
+        <h2>Grad</h2>
     </div>
     <div class="menu-card" onclick="openSection('key')">
-        <h2>Key Amethyst</h2>
+        <h2>Key</h2>
     </div>
     <div class="menu-card" onclick="openSection('points')">
-        <h2>500 Points</h2>
+        <h2>Points</h2>
     </div>
     <div class="menu-card" onclick="openSection('spawner')">
-        <h2>Cadou Spawner</h2>
+        <h2>Spawnere</h2>
     </div>
 </div>
 
@@ -359,8 +371,28 @@ footer{
     <div class="back-btn-container">
         <button class="back-btn" onclick="goHome()">Inapoi la meniu</button>
     </div>
-    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Grad Amethyst</h2>
+    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Grade Legendare</h2>
     <div class="container">
+        <div class="card">
+            <div>
+                <h2 class="title-og">Grad OG</h2>
+                <p><strong>Beneficii:</strong><br>/kit<br>/grindstone<br>/repair<br>/anvil</p>
+            </div>
+            <div>
+                <p class="price" data-raw-price="20">20 euro</p>
+                <button class="buy-btn" data-product="Grad OG">Cumpara</button>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <h2 class="title-cpvp">Grad CPVP</h2>
+                <p><strong>Beneficii:</strong><br>/kit<br>/grindstone<br>/repair<br>/anvil</p>
+            </div>
+            <div>
+                <p class="price" data-raw-price="5">5 euro</p>
+                <button class="buy-btn" data-product="Grad CPVP">Cumpara</button>
+            </div>
+        </div>
         <div class="card">
             <div>
                 <h2 class="title-amethyst">Grad Amethyst</h2>
@@ -378,7 +410,7 @@ footer{
     <div class="back-btn-container">
         <button class="back-btn" onclick="goHome()">Inapoi la meniu</button>
     </div>
-    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Cheie de Cufar</h2>
+    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Chei de Cufar</h2>
     <div class="container">
         <div class="card">
             <div>
@@ -390,6 +422,26 @@ footer{
                 <button class="buy-btn" data-product="Key Amethyst">Cumpara</button>
             </div>
         </div>
+        <div class="card">
+            <div>
+                <h2>Key Prime</h2>
+                <p>Cheie speciala pentru recompense unice.</p>
+            </div>
+            <div>
+                <p class="price" data-raw-price="1">1 euro</p>
+                <button class="buy-btn" data-product="Key Prime">Cumpara</button>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <h2>Key Crimson</h2>
+                <p>Descuie arsenalul ascuns de lupta.</p>
+            </div>
+            <div>
+                <p class="price" data-raw-price="1">1 euro</p>
+                <button class="buy-btn" data-product="Key Crimson">Cumpara</button>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -397,8 +449,18 @@ footer{
     <div class="back-btn-container">
         <button class="back-btn" onclick="goHome()">Inapoi la meniu</button>
     </div>
-    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Pachet Puncte</h2>
+    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Pachete de Diamante / Puncte</h2>
     <div class="container">
+        <div class="card">
+            <div>
+                <h2>100 Points</h2>
+                <p>Fonduri rapide pentru magazinul din joc.</p>
+            </div>
+            <div>
+                <p class="price" data-raw-price="1">1 euro</p>
+                <button class="buy-btn" data-product="100 Points">Cumpara</button>
+            </div>
+        </div>
         <div class="card">
             <div>
                 <h2>500 Points</h2>
@@ -409,6 +471,46 @@ footer{
                 <button class="buy-btn" data-product="500 Points">Cumpara</button>
             </div>
         </div>
+        <div class="card">
+            <div>
+                <h2>750 Points</h2>
+                <p>Resurse extinse pentru dominatie totala.</p>
+            </div>
+            <div>
+                <p class="price" data-raw-price="5">5 euro</p>
+                <button class="buy-btn" data-product="750 Points">Cumpara</button>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <h2>1500 Points</h2>
+                <p>Pachetul clasic de puncte pentru upgrade-uri mari.</p>
+            </div>
+            <div>
+                <p class="price" data-raw-price="10">10 euro</p>
+                <button class="buy-btn" data-product="1500 Points">Cumpara</button>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <h2>3000 Points</h2>
+                <p>Rezerve masive pentru jucatorii avansati.</p>
+            </div>
+            <div>
+                <p class="price" data-raw-price="15">15 euro</p>
+                <button class="buy-btn" data-product="3000 Points">Cumpara</button>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <h2>5000 Points</h2>
+                <p>Pachetul suprem pentru suprematie absoluta.</p>
+            </div>
+            <div>
+                <p class="price" data-raw-price="20">20 euro</p>
+                <button class="buy-btn" data-product="5000 Points">Cumpara</button>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -416,16 +518,66 @@ footer{
     <div class="back-btn-container">
         <button class="back-btn" onclick="goHome()">Inapoi la meniu</button>
     </div>
-    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Cadou Spawner</h2>
+    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Spawnere</h2>
     <div class="container">
         <div class="card">
             <div>
-                <h2>Spawner Cadou</h2>
-                <p>Un spawner surpriză oferit ca un cadou special.</p>
+                <h2>Cole x2</h2>
+                <p>Spawner pentru productie de carbune.</p>
             </div>
             <div>
-                <p class="price" data-raw-price="0">Gratuit</p>
-                <button class="buy-btn" data-product="Spawner Cadou">Revendica</button>
+                <p class="price" data-raw-price="1">1 euro</p>
+                <button class="buy-btn" data-product="Cole x2">Cumpara</button>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <h2>Spawner Iron</h2>
+                <p>Spawner pentru productie de fier.</p>
+            </div>
+            <div>
+                <p class="price" data-raw-price="1">1 euro</p>
+                <button class="buy-btn" data-product="Spawner Iron">Cumpara</button>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <h2>Spawner Gold</h2>
+                <p>Spawner pentru resurse de aur.</p>
+            </div>
+            <div>
+                <p class="price" data-raw-price="1">1 euro</p>
+                <button class="buy-btn" data-product="Spawner Gold">Cumpara</button>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <h2>Spawner Emerald</h2>
+                <p>Spawner avansat pentru smaralde.</p>
+            </div>
+            <div>
+                <p class="price" data-raw-price="2">2 euro</p>
+                <button class="buy-btn" data-product="Spawner Emerald">Cumpara</button>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <h2>Spawner Diamond</h2>
+                <p>Spawner suprem pentru diamante.</p>
+            </div>
+            <div>
+                <p class="price" data-raw-price="3">3 euro</p>
+                <button class="buy-btn" data-product="Spawner Diamond">Cumpara</button>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <h2>Spawner Netherite</h2>
+                <p>Spawner ultra-rar pentru netherite.</p>
+            </div>
+            <div>
+                <p class="price" data-raw-price="20">20 euro</p>
+                <button class="buy-btn" data-product="Spawner Netherite">Cumpara</button>
             </div>
         </div>
     </div>
@@ -525,7 +677,7 @@ footer{
     function updateTotal() {
         const qty = parseInt(quantityInput.value);
         const total = unitPrice * qty;
-        totalPriceText.textContent = unitPrice === 0 ? `Total: Gratuit` : `Total: ${total} euro`;
+        totalPriceText.textContent = `Total: ${total} euro`;
     }
 
     function goToPayment() {
@@ -533,7 +685,7 @@ footer{
         const qty = quantityInput.value;
         const total = unitPrice * qty;
         
-        paymentProductText.textContent = unitPrice === 0 ? `Produs: ${qty}x ${currentProduct} (Gratuit)` : `Produs: ${qty}x ${currentProduct} (${total} euro)`;
+        paymentProductText.textContent = `Produs: ${qty}x ${currentProduct} (${total} euro)`;
         
         paymentModal.style.display = "flex";
     }
@@ -558,7 +710,7 @@ footer{
     function completePayment(method) {
         const qty = quantityInput.value;
         paymentModal.style.display = "none";
-        notification.textContent = unitPrice === 0 ? `Ai revendicat cadoul ${qty}x ${currentProduct}! Multumiri!` : `Ai comandat ${qty}x ${currentProduct} prin ${method}! Multumiri!`;
+        notification.textContent = `Ai comandat ${qty}x ${currentProduct} prin ${method}! Multumiri!`;
         notification.style.display = "block";
         
         setTimeout(() => {
