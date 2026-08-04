@@ -79,7 +79,7 @@ h1{
     border: 2px solid #9932CC;
     border-radius: 20px;
     width: 220px;
-    height: 200px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -99,15 +99,10 @@ h1{
 }
 
 .menu-card h2 {
-    margin: 15px 0 0 0;
+    margin: 0;
     font-size: 24px;
     color: #f3e8ff;
     text-shadow: 0 0 10px #9932CC;
-}
-
-.menu-icon {
-    font-size: 45px;
-    filter: drop-shadow(0 0 10px rgba(218,112,214,0.8));
 }
 
 .store-section {
@@ -354,31 +349,27 @@ footer{
 <body>
 
 <header>
-    <h1>💎 AMETHYSTSAMP STORE 💎</h1>
+    <h1>AMETHYSTSAMP STORE</h1>
 </header>
 
 <div id="main-menu">
     <div class="menu-card" onclick="openSection('grad')">
-        <div class="menu-icon">🛡️</div>
         <h2>Grad</h2>
     </div>
     <div class="menu-card" onclick="openSection('key')">
-        <div class="menu-icon">🔑</div>
         <h2>Key</h2>
     </div>
     <div class="menu-card" onclick="openSection('points')">
-        <div class="menu-icon">💎</div>
         <h2>Points</h2>
     </div>
     <div class="menu-card" onclick="openSection('spawner')">
-        <div class="menu-icon">📦</div>
         <h2>Spawnere</h2>
     </div>
 </div>
 
 <div id="grad-section" class="store-section">
     <div class="back-btn-container">
-        <button class="back-btn" onclick="goHome()">⬅ Înapoi la meniu</button>
+        <button class="back-btn" onclick="goHome()">Inapoi la meniu</button>
     </div>
     <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Grade Legendare</h2>
     <div class="container">
@@ -389,7 +380,7 @@ footer{
             </div>
             <div>
                 <p class="price" data-raw-price="20">20 euro</p>
-                <button class="buy-btn" data-product="Grad OG">Cumpără</button>
+                <button class="buy-btn" data-product="Grad OG">Cumpara</button>
             </div>
         </div>
         <div class="card">
@@ -399,7 +390,7 @@ footer{
             </div>
             <div>
                 <p class="price" data-raw-price="5">5 euro</p>
-                <button class="buy-btn" data-product="Grad CPVP">Cumpără</button>
+                <button class="buy-btn" data-product="Grad CPVP">Cumpara</button>
             </div>
         </div>
         <div class="card">
@@ -409,7 +400,7 @@ footer{
             </div>
             <div>
                 <p class="price" data-raw-price="10">10 euro</p>
-                <button class="buy-btn" data-product="Grad Amethyst">Cumpără</button>
+                <button class="buy-btn" data-product="Grad Amethyst">Cumpara</button>
             </div>
         </div>
     </div>
@@ -417,38 +408,38 @@ footer{
 
 <div id="key-section" class="store-section">
     <div class="back-btn-container">
-        <button class="back-btn" onclick="goHome()">⬅ Înapoi la meniu</button>
+        <button class="back-btn" onclick="goHome()">Inapoi la meniu</button>
     </div>
-    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Chei de Cufăr</h2>
+    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Chei de Cufar</h2>
     <div class="container">
         <div class="card">
             <div>
                 <h2>Key Amethyst</h2>
-                <p>Descuie cufărul legendar cu efecte mov neon.</p>
+                <p>Descuie cufarul legendar cu efecte mov neon.</p>
             </div>
             <div>
                 <p class="price" data-raw-price="3">3 euro</p>
-                <button class="buy-btn" data-product="Key Amethyst">Cumpără</button>
+                <button class="buy-btn" data-product="Key Amethyst">Cumpara</button>
             </div>
         </div>
         <div class="card">
             <div>
                 <h2>Key Prime</h2>
-                <p>Cheie specială pentru recompense unice.</p>
+                <p>Cheie speciala pentru recompense unice.</p>
             </div>
             <div>
                 <p class="price" data-raw-price="1">1 euro</p>
-                <button class="buy-btn" data-product="Key Prime">Cumpără</button>
+                <button class="buy-btn" data-product="Key Prime">Cumpara</button>
             </div>
         </div>
         <div class="card">
             <div>
                 <h2>Key Crimson</h2>
-                <p>Descuie arsenalul ascuns de luptă.</p>
+                <p>Descuie arsenalul ascuns de lupta.</p>
             </div>
             <div>
                 <p class="price" data-raw-price="1">1 euro</p>
-                <button class="buy-btn" data-product="Key Crimson">Cumpără</button>
+                <button class="buy-btn" data-product="Key Crimson">Cumpara</button>
             </div>
         </div>
     </div>
@@ -456,7 +447,7 @@ footer{
 
 <div id="points-section" class="store-section">
     <div class="back-btn-container">
-        <button class="back-btn" onclick="goHome()">⬅ Înapoi la meniu</button>
+        <button class="back-btn" onclick="goHome()">Inapoi la meniu</button>
     </div>
     <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Pachete de Diamante / Puncte</h2>
     <div class="container">
@@ -467,7 +458,7 @@ footer{
             </div>
             <div>
                 <p class="price" data-raw-price="1">1 euro</p>
-                <button class="buy-btn" data-product="100 Points">Cumpără</button>
+                <button class="buy-btn" data-product="100 Points">Cumpara</button>
             </div>
         </div>
         <div class="card">
@@ -477,17 +468,17 @@ footer{
             </div>
             <div>
                 <p class="price" data-raw-price="3">3 euro</p>
-                <button class="buy-btn" data-product="500 Points">Cumpără</button>
+                <button class="buy-btn" data-product="500 Points">Cumpara</button>
             </div>
         </div>
         <div class="card">
             <div>
                 <h2>750 Points</h2>
-                <p>Resurse extinse pentru dominație totală.</p>
+                <p>Resurse extinse pentru dominatie totala.</p>
             </div>
             <div>
                 <p class="price" data-raw-price="5">5 euro</p>
-                <button class="buy-btn" data-product="750 Points">Cumpără</button>
+                <button class="buy-btn" data-product="750 Points">Cumpara</button>
             </div>
         </div>
         <div class="card">
@@ -497,27 +488,27 @@ footer{
             </div>
             <div>
                 <p class="price" data-raw-price="10">10 euro</p>
-                <button class="buy-btn" data-product="1500 Points">Cumpără</button>
+                <button class="buy-btn" data-product="1500 Points">Cumpara</button>
             </div>
         </div>
         <div class="card">
             <div>
                 <h2>3000 Points</h2>
-                <p>Rezerve masive pentru jucătorii avansați.</p>
+                <p>Rezerve masive pentru jucatorii avansati.</p>
             </div>
             <div>
                 <p class="price" data-raw-price="15">15 euro</p>
-                <button class="buy-btn" data-product="3000 Points">Cumpără</button>
+                <button class="buy-btn" data-product="3000 Points">Cumpara</button>
             </div>
         </div>
         <div class="card">
             <div>
                 <h2>5000 Points</h2>
-                <p>Pachetul suprem pentru supremație absolută.</p>
+                <p>Pachetul suprem pentru suprematie absoluta.</p>
             </div>
             <div>
                 <p class="price" data-raw-price="20">20 euro</p>
-                <button class="buy-btn" data-product="5000 Points">Cumpără</button>
+                <button class="buy-btn" data-product="5000 Points">Cumpara</button>
             </div>
         </div>
     </div>
@@ -525,28 +516,28 @@ footer{
 
 <div id="spawner-section" class="store-section">
     <div class="back-btn-container">
-        <button class="back-btn" onclick="goHome()">⬅ Înapoi la meniu</button>
+        <button class="back-btn" onclick="goHome()">Inapoi la meniu</button>
     </div>
     <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Spawnere</h2>
     <div class="container">
         <div class="card">
             <div>
                 <h2>Cole x2</h2>
-                <p>Spawner pentru producție de cărbune.</p>
+                <p>Spawner pentru productie de carbune.</p>
             </div>
             <div>
                 <p class="price" data-raw-price="1">1 euro</p>
-                <button class="buy-btn" data-product="Cole x2">Cumpără</button>
+                <button class="buy-btn" data-product="Cole x2">Cumpara</button>
             </div>
         </div>
         <div class="card">
             <div>
                 <h2>Spawner Iron</h2>
-                <p>Spawner pentru producție de fier.</p>
+                <p>Spawner pentru productie de fier.</p>
             </div>
             <div>
                 <p class="price" data-raw-price="1">1 euro</p>
-                <button class="buy-btn" data-product="Spawner Iron">Cumpără</button>
+                <button class="buy-btn" data-product="Spawner Iron">Cumpara</button>
             </div>
         </div>
         <div class="card">
@@ -556,7 +547,7 @@ footer{
             </div>
             <div>
                 <p class="price" data-raw-price="1">1 euro</p>
-                <button class="buy-btn" data-product="Spawner Gold">Cumpără</button>
+                <button class="buy-btn" data-product="Spawner Gold">Cumpara</button>
             </div>
         </div>
         <div class="card">
@@ -566,7 +557,7 @@ footer{
             </div>
             <div>
                 <p class="price" data-raw-price="2">2 euro</p>
-                <button class="buy-btn" data-product="Spawner Emerald">Cumpără</button>
+                <button class="buy-btn" data-product="Spawner Emerald">Cumpara</button>
             </div>
         </div>
         <div class="card">
@@ -576,7 +567,7 @@ footer{
             </div>
             <div>
                 <p class="price" data-raw-price="3">3 euro</p>
-                <button class="buy-btn" data-product="Spawner Diamond">Cumpără</button>
+                <button class="buy-btn" data-product="Spawner Diamond">Cumpara</button>
             </div>
         </div>
         <div class="card">
@@ -586,7 +577,7 @@ footer{
             </div>
             <div>
                 <p class="price" data-raw-price="20">20 euro</p>
-                <button class="buy-btn" data-product="Spawner Netherite">Cumpără</button>
+                <button class="buy-btn" data-product="Spawner Netherite">Cumpara</button>
             </div>
         </div>
     </div>
@@ -600,33 +591,33 @@ footer{
         <p id="qtyProductText">Produs: -</p>
         
         <div class="quantity-container">
-            <label for="productQuantity">Număr de bucăți:</label>
+            <label for="productQuantity">Numar de bucati:</label>
             <input type="number" id="productQuantity" min="1" value="1">
         </div>
 
         <div class="total-price" id="totalPriceText">Total: 0 euro</div>
         
-        <button class="next-step-btn" onclick="goToPayment()">Continuă spre plată</button>
+        <button class="next-step-btn" onclick="goToPayment()">Continua spre plata</button>
     </div>
 </div>
 
-<!-- Fereastra 2: Metodă de plată -->
+<!-- Fereastra 2: Metoda de plata -->
 <div id="paymentModal" class="modal">
     <div class="modal-content">
         <span class="close-btn" id="closePaymentModal">&times;</span>
-        <h3>Metodă de plată</h3>
+        <h3>Metoda de plata</h3>
         <p id="paymentProductText">Produs: -</p>
         
         <div class="payment-methods">
-            <button class="pay-btn" onclick="completePayment('Paysafecard')">🔑 Paysafecard</button>
+            <button class="pay-btn" onclick="completePayment('Paysafecard')">Paysafecard</button>
         </div>
     </div>
 </div>
 
-<div id="notification" class="notification">Plată simulată cu succes!</div>
+<div id="notification" class="notification">Plata simulata cu succes!</div>
 
 <footer>
-<p>© 2026 AmethystSMP Store • Toate drepturile rezervate</p>
+<p>&copy; 2026 AmethystSMP Store • Toate drepturile rezervate</p>
 </footer>
 
 <script>
@@ -721,7 +712,7 @@ footer{
     function completePayment(method) {
         const qty = quantityInput.value;
         paymentModal.style.display = "none";
-        notification.textContent = `Ai comandat ${qty}x ${currentProduct} prin ${method}! Mulțumiri!`;
+        notification.textContent = `Ai comandat ${qty}x ${currentProduct} prin ${method}! Multumiri!`;
         notification.style.display = "block";
         
         setTimeout(() => {
