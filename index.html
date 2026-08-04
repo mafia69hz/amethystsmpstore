@@ -171,46 +171,33 @@ h1 {
     font-size: 14px;
 }
 
-/* Stilizare avansată tip "Spawner 3D" din Minecraft */
-.spawner-box-3d {
-    width: 75px;
-    height: 75px;
+/* Stilizare imagine spawner (Sticker/Badge vizual Minecraft 3D) */
+.spawner-img-badge {
+    width: 85px;
+    height: 85px;
     margin: 0 auto 15px auto;
-    background: radial-gradient(circle, #2b1d3d 0%, #0d0614 100%);
-    border: 2px solid #00ffcc;
-    border-radius: 12px;
+    background: linear-gradient(135deg, #180826, #3b0e5e);
+    border: 3px solid #00ffcc;
+    border-radius: 14px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    box-shadow: 0 0 15px rgba(0,255,204,0.4), inset 0 0 12px rgba(153,50,204,0.6);
-    animation: spawnerGlow 3s ease-in-out infinite alternate;
+    box-shadow: 0 0 20px rgba(0,255,204,0.5), inset 0 0 12px rgba(153,50,204,0.8);
+    animation: spawnerPulse 2.5s ease-in-out infinite alternate;
 }
 
-@keyframes spawnerGlow {
-    0% { border-color: #00ffcc; box-shadow: 0 0 10px rgba(0,255,204,0.4), inset 0 0 10px rgba(153,50,204,0.4); }
-    100% { border-color: #da70d6; box-shadow: 0 0 20px rgba(218,112,214,0.8), inset 0 0 18px rgba(0,255,204,0.6); }
+@keyframes spawnerPulse {
+    0% { transform: scale(1); border-color: #00ffcc; box-shadow: 0 0 15px rgba(0,255,204,0.4); }
+    100% { transform: scale(1.05); border-color: #da70d6; box-shadow: 0 0 25px rgba(218,112,214,0.8); }
 }
 
-/* Grilaj fin simulat ca gratiile de fier de la spawner */
-.spawner-box-3d::after {
-    content: "";
-    position: absolute;
-    inset: 5px;
-    border: 1px dashed rgba(255,255,255,0.25);
-    border-radius: 8px;
-    pointer-events: none;
-}
-
-.spawner-emoji {
-    font-size: 34px;
-    filter: drop-shadow(0 0 8px rgba(255,255,255,0.8));
-    animation: floatItem 2.5s ease-in-out infinite alternate;
-}
-
-@keyframes floatItem {
-    0% { transform: translateY(0px) scale(1); }
-    100% { transform: translateY(-4px) scale(1.08); }
+/* Simulam designul unui spawner stil cub Minecraft */
+.spawner-img-badge img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 6px rgba(255,255,255,0.9));
 }
 
 .price {
@@ -571,9 +558,12 @@ footer {
     </div>
     <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Spawnere</h2>
     <div class="container">
+        <!-- Cole x2 -->
         <div class="card">
             <div>
-                <div class="spawner-box-3d"><span class="spawner-emoji">⚫</span></div>
+                <div class="spawner-img-badge">
+                    <img src="https://minecraft.wiki/images/Coal_Ore_JE3_BE2.png" alt="Coal Ore">
+                </div>
                 <h2>Cole x2</h2>
                 <p>Spawner pentru producție de cărbune.</p>
             </div>
@@ -582,9 +572,12 @@ footer {
                 <button class="buy-btn" data-product="Cole x2">Cumpără</button>
             </div>
         </div>
+        <!-- Spawner Iron -->
         <div class="card">
             <div>
-                <div class="spawner-box-3d"><span class="spawner-emoji">⚙️</span></div>
+                <div class="spawner-img-badge">
+                    <img src="https://minecraft.wiki/images/Iron_Ore_JE3_BE2.png" alt="Iron Ore">
+                </div>
                 <h2>Spawner Iron</h2>
                 <p>Spawner pentru producție de fier.</p>
             </div>
@@ -593,9 +586,12 @@ footer {
                 <button class="buy-btn" data-product="Spawner Iron">Cumpără</button>
             </div>
         </div>
+        <!-- Spawner Gold -->
         <div class="card">
             <div>
-                <div class="spawner-box-3d"><span class="spawner-emoji">🟡</span></div>
+                <div class="spawner-img-badge">
+                    <img src="https://minecraft.wiki/images/Gold_Ore_JE3_BE2.png" alt="Gold Ore">
+                </div>
                 <h2>Spawner Gold</h2>
                 <p>Spawner pentru resurse de aur.</p>
             </div>
@@ -604,9 +600,12 @@ footer {
                 <button class="buy-btn" data-product="Spawner Gold">Cumpără</button>
             </div>
         </div>
+        <!-- Spawner Emerald -->
         <div class="card">
             <div>
-                <div class="spawner-box-3d"><span class="spawner-emoji">🟢</span></div>
+                <div class="spawner-img-badge">
+                    <img src="https://minecraft.wiki/images/Emerald_Ore_JE3_BE2.png" alt="Emerald Ore">
+                </div>
                 <h2>Spawner Emerald</h2>
                 <p>Spawner avansat pentru smaralde.</p>
             </div>
@@ -615,9 +614,12 @@ footer {
                 <button class="buy-btn" data-product="Spawner Emerald">Cumpără</button>
             </div>
         </div>
+        <!-- Spawner Diamond -->
         <div class="card">
             <div>
-                <div class="spawner-box-3d"><span class="spawner-emoji">💎</span></div>
+                <div class="spawner-img-badge">
+                    <img src="https://minecraft.wiki/images/Diamond_Ore_JE3_BE2.png" alt="Diamond Ore">
+                </div>
                 <h2>Spawner Diamond</h2>
                 <p>Spawner suprem pentru diamante.</p>
             </div>
@@ -626,9 +628,12 @@ footer {
                 <button class="buy-btn" data-product="Spawner Diamond">Cumpără</button>
             </div>
         </div>
+        <!-- Spawner Netherite -->
         <div class="card">
             <div>
-                <div class="spawner-box-3d"><span class="spawner-emoji">🖤</span></div>
+                <div class="spawner-img-badge">
+                    <img src="https://minecraft.wiki/images/Ancient_Debris_JE2_BE2.png" alt="Ancient Debris">
+                </div>
                 <h2>Spawner Netherite</h2>
                 <p>Spawner ultra-rar pentru netherite.</p>
             </div>
