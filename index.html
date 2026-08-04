@@ -144,11 +144,20 @@ h1{
     transform: translateY(-5px);
 }
 
-.card-img {
+/* Container fix pentru imagini ca să nu mai iasă din card */
+.card-img-container {
     width: 80px;
     height: 80px;
-    object-fit: contain;
     margin: 0 auto 15px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
     filter: drop-shadow(0 0 10px rgba(153,50,204,0.7));
 }
 
@@ -157,7 +166,7 @@ h1{
     margin-top: 0;
 }
 
-/* Culori cerute pentru grade */
+/* Culori pentru grade */
 .title-og {
     color: #ffcc00 !important;
     font-size: 26px !important;
@@ -402,7 +411,7 @@ footer{
     <div class="container">
         <div class="card">
             <div>
-                <img src="https://i.imgur.com/3Z1089u.png" alt="Grad OG" class="card-img">
+                <div class="card-img-container"><img src="https://i.imgur.com/3Z1089u.png" alt="Grad OG" class="card-img"></div>
                 <h2 class="title-og">Grad OG</h2>
                 <p><strong>Beneficii:</strong><br>/kit<br>/grindstone<br>/repair<br>/anvil</p>
             </div>
@@ -413,7 +422,7 @@ footer{
         </div>
         <div class="card">
             <div>
-                <img src="https://i.imgur.com/3Z1089u.png" alt="Grad CPVP" class="card-img">
+                <div class="card-img-container"><img src="https://i.imgur.com/3Z1089u.png" alt="Grad CPVP" class="card-img"></div>
                 <h2 class="title-cpvp">Grad CPVP</h2>
                 <p><strong>Beneficii:</strong><br>/kit<br>/grindstone<br>/repair<br>/anvil</p>
             </div>
@@ -424,7 +433,7 @@ footer{
         </div>
         <div class="card">
             <div>
-                <img src="https://i.imgur.com/3Z1089u.png" alt="Grad Amethyst" class="card-img">
+                <div class="card-img-container"><img src="https://i.imgur.com/3Z1089u.png" alt="Grad Amethyst" class="card-img"></div>
                 <h2 class="title-amethyst">Grad Amethyst</h2>
                 <p><strong>Beneficii:</strong><br>/kit<br>/grindstone<br>/repair<br>/anvil</p>
             </div>
@@ -444,7 +453,7 @@ footer{
     <div class="container">
         <div class="card">
             <div>
-                <img src="https://i.imgur.com/O61L29u.png" alt="Key Amethyst" class="card-img">
+                <div class="card-img-container"><img src="https://i.imgur.com/O61L29u.png" alt="Key Amethyst" class="card-img"></div>
                 <h2>Key Amethyst</h2>
                 <p>Descuie cufărul legendar cu efecte mov neon.</p>
             </div>
@@ -455,7 +464,7 @@ footer{
         </div>
         <div class="card">
             <div>
-                <img src="https://i.imgur.com/O61L29u.png" alt="Key Prime" class="card-img">
+                <div class="card-img-container"><img src="https://i.imgur.com/O61L29u.png" alt="Key Prime" class="card-img"></div>
                 <h2>Key Prime</h2>
                 <p>Cheie specială pentru recompense unice.</p>
             </div>
@@ -466,7 +475,7 @@ footer{
         </div>
         <div class="card">
             <div>
-                <img src="https://i.imgur.com/O61L29u.png" alt="Key Crimson" class="card-img">
+                <div class="card-img-container"><img src="https://i.imgur.com/O61L29u.png" alt="Key Crimson" class="card-img"></div>
                 <h2>Key Crimson</h2>
                 <p>Descuie arsenalul ascuns de luptă.</p>
             </div>
@@ -486,7 +495,7 @@ footer{
     <div class="container">
         <div class="card">
             <div>
-                <img src="https://i.imgur.com/40fZL1s.png" alt="100 Points" class="card-img">
+                <div class="card-img-container"><img src="https://i.imgur.com/40fZL1s.png" alt="100 Points" class="card-img"></div>
                 <h2>100 Points</h2>
                 <p>Fonduri rapide pentru magazinul din joc.</p>
             </div>
@@ -497,7 +506,7 @@ footer{
         </div>
         <div class="card">
             <div>
-                <img src="https://i.imgur.com/40fZL1s.png" alt="500 Points" class="card-img">
+                <div class="card-img-container"><img src="https://i.imgur.com/40fZL1s.png" alt="500 Points" class="card-img"></div>
                 <h2>500 Points</h2>
                 <p>Pachet avantajos de puncte pentru upgrade-uri.</p>
             </div>
@@ -508,7 +517,7 @@ footer{
         </div>
         <div class="card">
             <div>
-                <img src="https://i.imgur.com/40fZL1s.png" alt="750 Points" class="card-img">
+                <div class="card-img-container"><img src="https://i.imgur.com/40fZL1s.png" alt="750 Points" class="card-img"></div>
                 <h2>750 Points</h2>
                 <p>Resurse extinse pentru dominație totală.</p>
             </div>
@@ -519,7 +528,7 @@ footer{
         </div>
         <div class="card">
             <div>
-                <img src="https://i.imgur.com/40fZL1s.png" alt="1500 Points" class="card-img">
+                <div class="card-img-container"><img src="https://i.imgur.com/40fZL1s.png" alt="1500 Points" class="card-img"></div>
                 <h2>1500 Points</h2>
                 <p>Pachetul clasic de puncte pentru upgrade-uri mari.</p>
             </div>
@@ -530,7 +539,7 @@ footer{
         </div>
         <div class="card">
             <div>
-                <img src="https://i.imgur.com/40fZL1s.png" alt="3000 Points" class="card-img">
+                <div class="card-img-container"><img src="https://i.imgur.com/40fZL1s.png" alt="3000 Points" class="card-img"></div>
                 <h2>3000 Points</h2>
                 <p>Rezerve masive pentru jucătorii avansați.</p>
             </div>
@@ -541,7 +550,7 @@ footer{
         </div>
         <div class="card">
             <div>
-                <img src="https://i.imgur.com/40fZL1s.png" alt="5000 Points" class="card-img">
+                <div class="card-img-container"><img src="https://i.imgur.com/40fZL1s.png" alt="5000 Points" class="card-img"></div>
                 <h2>5000 Points</h2>
                 <p>Pachetul suprem pentru supremație absolută.</p>
             </div>
@@ -553,7 +562,7 @@ footer{
     </div>
 </div>
 
-<div id="spawner-section" class="store-section">
+<div id="spawner-section" class="store-section active">
     <div class="back-btn-container">
         <button class="back-btn" onclick="goHome()">⬅ Înapoi la meniu</button>
     </div>
@@ -561,7 +570,7 @@ footer{
     <div class="container">
         <div class="card">
             <div>
-                <img src="https://minecraft.wiki/images/Coal_Ore_JE3_BE2.png" alt="Cole x2" class="card-img">
+                <div class="card-img-container"><img src="https://minecraft.wiki/images/Coal_Ore_JE3_BE2.png" alt="Cole x2" class="card-img"></div>
                 <h2>Cole x2</h2>
                 <p>Spawner pentru producție de cărbune.</p>
             </div>
@@ -572,7 +581,7 @@ footer{
         </div>
         <div class="card">
             <div>
-                <img src="https://minecraft.wiki/images/Iron_Ore_JE3_BE3.png" alt="Spawner Iron" class="card-img">
+                <div class="card-img-container"><img src="https://minecraft.wiki/images/Iron_Ore_JE3_BE3.png" alt="Spawner Iron" class="card-img"></div>
                 <h2>Spawner Iron</h2>
                 <p>Spawner pentru producție de fier.</p>
             </div>
@@ -583,7 +592,7 @@ footer{
         </div>
         <div class="card">
             <div>
-                <img src="https://minecraft.wiki/images/Gold_Ore_JE4_BE3.png" alt="Spawner Gold" class="card-img">
+                <div class="card-img-container"><img src="https://minecraft.wiki/images/Gold_Ore_JE4_BE3.png" alt="Spawner Gold" class="card-img"></div>
                 <h2>Spawner Gold</h2>
                 <p>Spawner pentru resurse de aur.</p>
             </div>
@@ -594,7 +603,7 @@ footer{
         </div>
         <div class="card">
             <div>
-                <img src="https://minecraft.wiki/images/Emerald_Ore_JE3_BE3.png" alt="Spawner Emerald" class="card-img">
+                <div class="card-img-container"><img src="https://minecraft.wiki/images/Emerald_Ore_JE3_BE3.png" alt="Spawner Emerald" class="card-img"></div>
                 <h2>Spawner Emerald</h2>
                 <p>Spawner avansat pentru smaralde.</p>
             </div>
@@ -605,7 +614,7 @@ footer{
         </div>
         <div class="card">
             <div>
-                <img src="https://minecraft.wiki/images/Diamond_Ore_JE3_BE3.png" alt="Spawner Diamond" class="card-img">
+                <div class="card-img-container"><img src="https://minecraft.wiki/images/Diamond_Ore_JE3_BE3.png" alt="Spawner Diamond" class="card-img"></div>
                 <h2>Spawner Diamond</h2>
                 <p>Spawner suprem pentru diamante.</p>
             </div>
@@ -616,7 +625,7 @@ footer{
         </div>
         <div class="card">
             <div>
-                <img src="https://minecraft.wiki/images/Ancient_Debris_JE2_BE2.png" alt="Spawner Netherite" class="card-img">
+                <div class="card-img-container"><img src="https://minecraft.wiki/images/Ancient_Debris_JE2_BE2.png" alt="Spawner Netherite" class="card-img"></div>
                 <h2>Spawner Netherite</h2>
                 <p>Spawner ultra-rar pentru netherite.</p>
             </div>
