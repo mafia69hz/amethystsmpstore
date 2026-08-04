@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AmethystSMP Store</title>
 <style>
-body{
-    margin:0;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background:#07020d;
-    color:#ffffff;
-    text-align:center;
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #07020d;
+    color: #ffffff;
+    text-align: center;
     background-image: 
         radial-gradient(circle at 20% 20%, rgba(138, 43, 226, 0.25) 0%, transparent 40%),
         radial-gradient(circle at 80% 80%, rgba(153, 50, 204, 0.25) 0%, transparent 40%),
@@ -20,7 +20,7 @@ body{
     flex-direction: column;
 }
 
-header{
+header {
     background: linear-gradient(90deg, #2c0c4f, #4b0082, #2c0c4f);
     background-size: 200% 200%;
     animation: gradientShift 6s ease infinite;
@@ -35,8 +35,8 @@ header{
     100% { background-position: 0% 50%; }
 }
 
-h1{
-    margin:0;
+h1 {
+    margin: 0;
     font-size: 38px;
     text-shadow: 0 0 15px rgba(218, 112, 214, 0.8), 0 0 30px rgba(138, 43, 226, 0.6);
     letter-spacing: 2px;
@@ -117,15 +117,15 @@ h1{
     display: block;
 }
 
-.container{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:25px;
-    padding:20px 40px 50px 40px;
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 20px 40px 50px 40px;
 }
 
-.card{
+.card {
     background: linear-gradient(145deg, #12051f, #1e0933);
     border: 2px solid #6b18bc;
     border-radius: 16px;
@@ -171,28 +171,28 @@ h1{
     font-size: 14px;
 }
 
-.price{
-    color:#00ffcc;
-    font-size:26px;
-    font-weight:bold;
+.price {
+    color: #00ffcc;
+    font-size: 26px;
+    font-weight: bold;
     margin: 15px 0;
     text-shadow: 0 0 12px rgba(0,255,204,0.6);
 }
 
-button.buy-btn{
+button.buy-btn {
     background: linear-gradient(135deg, #7b2cbf, #b5179e);
-    color:white;
+    color: white;
     border: none;
     padding: 12px 20px;
     border-radius: 10px;
-    cursor:pointer;
+    cursor: pointer;
     font-weight: bold;
     font-size: 16px;
     box-shadow: 0 0 15px rgba(183,23,158,0.5);
     transition: 0.3s;
 }
 
-button.buy-btn:hover{
+button.buy-btn:hover {
     background: linear-gradient(135deg, #b5179e, #00ffcc);
     color: #07020d;
     box-shadow: 0 0 25px rgba(0,255,204,0.8);
@@ -342,10 +342,10 @@ button.buy-btn:hover{
     z-index: 200;
 }
 
-footer{
-    margin-top:auto;
-    padding:20px;
-    background:#040108;
+footer {
+    margin-top: auto;
+    padding: 20px;
+    background: #040108;
     border-top: 1px solid #280a47;
     color: #8c78b5;
 }
@@ -359,19 +359,19 @@ footer{
 
 <div id="main-menu">
     <div class="menu-card" onclick="openSection('grad')">
-        <div class="menu-icon">🛡️</div>
+        <div class="menu-icon">&#128737;</div>
         <h2>Grad</h2>
     </div>
     <div class="menu-card" onclick="openSection('key')">
-        <div class="menu-icon">🔑</div>
+        <div class="menu-icon">&#128273;</div>
         <h2>Key</h2>
     </div>
     <div class="menu-card" onclick="openSection('points')">
-        <div class="menu-icon">💎</div>
+        <div class="menu-icon">&#128142;</div>
         <h2>Points</h2>
     </div>
     <div class="menu-card" onclick="openSection('spawner')">
-        <div class="menu-icon">📦</div>
+        <div class="menu-icon">&#128230;</div>
         <h2>Spawnere</h2>
     </div>
 </div>
@@ -592,7 +592,6 @@ footer{
     </div>
 </div>
 
-<!-- Fereastra 1: Alegere Cantitate -->
 <div id="quantityModal" class="modal">
     <div class="modal-content">
         <span class="close-btn" id="closeQuantityModal">&times;</span>
@@ -610,7 +609,6 @@ footer{
     </div>
 </div>
 
-<!-- Fereastra 2: Metodă de plată -->
 <div id="paymentModal" class="modal">
     <div class="modal-content">
         <span class="close-btn" id="closePaymentModal">&times;</span>
@@ -618,7 +616,7 @@ footer{
         <p id="paymentProductText">Produs: -</p>
         
         <div class="payment-methods">
-            <button class="pay-btn" onclick="completePayment('Paysafecard')">🔑 Paysafecard</button>
+            <button class="pay-btn" onclick="completePayment('Paysafecard')">&#128273; Paysafecard</button>
         </div>
     </div>
 </div>
