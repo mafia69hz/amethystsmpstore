@@ -76,7 +76,7 @@ header p {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 30px;
     flex: 1;
     padding: 40px;
 }
@@ -85,8 +85,8 @@ header p {
     background: linear-gradient(145deg, #12051f, #220b3b);
     border: 2px solid #9932CC;
     border-radius: 20px;
-    width: 250px;
-    height: 220px;
+    width: 220px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -123,14 +123,14 @@ header p {
 
 .menu-card h2 {
     margin: 15px 0 0 0;
-    font-size: 28px;
+    font-size: 24px;
     color: #f3e8ff;
     text-shadow: 0 0 10px #9932CC;
     letter-spacing: 1px;
 }
 
 .menu-icon {
-    font-size: 50px;
+    font-size: 45px;
     filter: drop-shadow(0 0 10px rgba(218,112,214,0.8));
     animation: floatIcon 3s ease-in-out infinite;
 }
@@ -329,6 +329,10 @@ footer{
         <div class="menu-icon">💎</div>
         <h2>Points</h2>
     </div>
+    <div class="menu-card" onclick="openSection('spawner')">
+        <div class="menu-icon">📦</div>
+        <h2>Spawnere</h2>
+    </div>
 </div>
 
 <div id="grad-section" class="store-section">
@@ -473,6 +477,65 @@ footer{
             <div>
                 <p class="price">20 euro</p>
                 <button class="buy-btn" data-product="5000 Points">Cumpără</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="spawner-section" class="store-section">
+    <div class="back-btn-container">
+        <button class="back-btn" onclick="goHome()">⬅ Înapoi la meniu</button>
+    </div>
+    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Spawnere</h2>
+    <div class="container">
+        <div class="card">
+            <div>
+                <h2>Spawner Cow x2</h2>
+                <p>Spawner dublu pentru vite.</p>
+            </div>
+            <div>
+                <p class="price">5 lei</p>
+                <button class="buy-btn" data-product="Spawner Cow x2">Cumpără</button>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <h2>Spawner Iron</h2>
+                <p>Spawner pentru producție de fier.</p>
+            </div>
+            <div>
+                <p class="price">5 lei</p>
+                <button class="buy-btn" data-product="Spawner Iron">Cumpără</button>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <h2>Spawner Gold</h2>
+                <p>Spawner pentru resurse de aur.</p>
+            </div>
+            <div>
+                <p class="price">5 lei</p>
+                <button class="buy-btn" data-product="Spawner Gold">Cumpără</button>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <h2>Spawner Emerald</h2>
+                <p>Spawner avansat pentru smaralde.</p>
+            </div>
+            <div>
+                <p class="price">10 lei</p>
+                <button class="buy-btn" data-product="Spawner Emerald">Cumpără</button>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <h2>Spawner Diamond</h2>
+                <p>Spawner suprem pentru diamante.</p>
+            </div>
+            <div>
+                <p class="price">15 lei</p>
+                <button class="buy-btn" data-product="Spawner Diamond">Cumpără</button>
             </div>
         </div>
     </div>
