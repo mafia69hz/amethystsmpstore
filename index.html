@@ -69,17 +69,19 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 25px;
     flex: 1;
     padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .menu-card {
     background: linear-gradient(145deg, #12051f, #220b3b);
     border: 2px solid #9932CC;
     border-radius: 20px;
-    width: 220px;
-    height: 200px;
+    width: 200px;
+    height: 180px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,8 +89,6 @@ h1 {
     cursor: pointer;
     box-shadow: 0 0 20px rgba(153,50,204,0.4), inset 0 0 15px rgba(138,43,226,0.2);
     transition: 0.4s ease;
-    position: relative;
-    overflow: hidden;
 }
 
 .menu-card:hover {
@@ -100,13 +100,13 @@ h1 {
 
 .menu-card h2 {
     margin: 15px 0 0 0;
-    font-size: 24px;
+    font-size: 22px;
     color: #f3e8ff;
     text-shadow: 0 0 10px #9932CC;
 }
 
 .menu-icon {
-    font-size: 45px;
+    font-size: 40px;
     filter: drop-shadow(0 0 10px rgba(218,112,214,0.8));
 }
 
@@ -171,7 +171,6 @@ h1 {
     font-size: 14px;
 }
 
-/* Stilizare imagine spawner (Sticker/Badge vizual Minecraft 3D) */
 .spawner-img-badge {
     width: 85px;
     height: 85px;
@@ -389,6 +388,7 @@ footer {
     <h1>💎 AMETHYSTSAMP STORE 💎</h1>
 </header>
 
+<!-- Meniul Principal cu secțiunea Tags inclusă -->
 <div id="main-menu">
     <div class="menu-card" onclick="openSection('grad')">
         <div class="menu-icon">&#128737;</div>
@@ -646,7 +646,7 @@ footer {
     </div>
 </div>
 
-<!-- Secțiune nouă Tags -->
+<!-- Secțiunea Tags -->
 <div id="tags-section" class="store-section">
     <div class="back-btn-container">
         <button class="back-btn" onclick="goHome()">⬅ Înapoi la meniu</button>
@@ -655,7 +655,7 @@ footer {
     <div class="container">
         <div class="card">
             <div>
-                <h2>Custom Tag Personalizat</h2>
+                <h2>Custom Tag</h2>
                 <p>Creează-ți propriul tag personalizat pentru chat cu orice text dorești!</p>
             </div>
             <div>
@@ -672,13 +672,11 @@ footer {
         <h3>Alege opțiunile</h3>
         <p id="qtyProductText">Produs: -</p>
         
-        <!-- Container cantitate (pentru restul produselor) -->
         <div id="quantityFieldContainer" class="quantity-container">
             <label for="productQuantity">Număr de bucăți:</label>
             <input type="number" id="productQuantity" min="1" value="1">
         </div>
 
-        <!-- Container text personalizat (doar pentru Tags) -->
         <div id="customTagContainer" class="tag-input-container" style="display: none;">
             <label for="customTagText">Scrie textul pentru tag:</label>
             <input type="text" id="customTagText" placeholder="ex: [Rege]">
@@ -754,7 +752,6 @@ footer {
 
             qtyProductText.textContent = `Produs: ${currentProduct}`;
             
-            // Verificăm dacă produsul este Custom Tag pentru a schimba câmpurile din modal
             if (currentProduct === "Custom Tag") {
                 quantityFieldContainer.style.display = "none";
                 customTagContainer.style.display = "flex";
