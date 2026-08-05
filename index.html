@@ -192,7 +192,6 @@ h1 {
     100% { transform: scale(1.05); border-color: #da70d6; box-shadow: 0 0 25px rgba(218,112,214,0.8); }
 }
 
-/* Simulam designul unui spawner stil cub Minecraft */
 .spawner-img-badge img {
     width: 55px;
     height: 55px;
@@ -262,7 +261,7 @@ button.buy-btn:hover {
     margin: 8px 0;
 }
 
-.quantity-container {
+.quantity-container, .tag-input-container {
     margin: 15px 0;
     display: flex;
     flex-direction: column;
@@ -270,12 +269,12 @@ button.buy-btn:hover {
     gap: 8px;
 }
 
-.quantity-container label {
+.quantity-container label, .tag-input-container label {
     font-size: 14px;
     color: #e0d1ff;
 }
 
-.quantity-container input {
+.quantity-container input, .tag-input-container input {
     background: #12051f;
     border: 2px solid #9932CC;
     color: #00ffcc;
@@ -286,6 +285,10 @@ button.buy-btn:hover {
     text-align: center;
     border-radius: 8px;
     outline: none;
+}
+
+.tag-input-container input {
+    width: 90%;
 }
 
 .total-price {
@@ -402,6 +405,10 @@ footer {
     <div class="menu-card" onclick="openSection('spawner')">
         <div class="menu-icon">&#128230;</div>
         <h2>Spawnere</h2>
+    </div>
+    <div class="menu-card" onclick="openSection('tags')">
+        <div class="menu-icon">&#127991;</div>
+        <h2>Tags</h2>
     </div>
 </div>
 
@@ -558,7 +565,6 @@ footer {
     </div>
     <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Spawnere</h2>
     <div class="container">
-        <!-- Cole x2 -->
         <div class="card">
             <div>
                 <div class="spawner-img-badge">
@@ -572,7 +578,6 @@ footer {
                 <button class="buy-btn" data-product="Cole x2">Cumpără</button>
             </div>
         </div>
-        <!-- Spawner Iron -->
         <div class="card">
             <div>
                 <div class="spawner-img-badge">
@@ -586,7 +591,6 @@ footer {
                 <button class="buy-btn" data-product="Spawner Iron">Cumpără</button>
             </div>
         </div>
-        <!-- Spawner Gold -->
         <div class="card">
             <div>
                 <div class="spawner-img-badge">
@@ -600,7 +604,6 @@ footer {
                 <button class="buy-btn" data-product="Spawner Gold">Cumpără</button>
             </div>
         </div>
-        <!-- Spawner Emerald -->
         <div class="card">
             <div>
                 <div class="spawner-img-badge">
@@ -614,7 +617,6 @@ footer {
                 <button class="buy-btn" data-product="Spawner Emerald">Cumpără</button>
             </div>
         </div>
-        <!-- Spawner Diamond -->
         <div class="card">
             <div>
                 <div class="spawner-img-badge">
@@ -628,7 +630,6 @@ footer {
                 <button class="buy-btn" data-product="Spawner Diamond">Cumpără</button>
             </div>
         </div>
-        <!-- Spawner Netherite -->
         <div class="card">
             <div>
                 <div class="spawner-img-badge">
@@ -645,18 +646,45 @@ footer {
     </div>
 </div>
 
+<!-- Secțiune nouă Tags -->
+<div id="tags-section" class="store-section">
+    <div class="back-btn-container">
+        <button class="back-btn" onclick="goHome()">⬅ Înapoi la meniu</button>
+    </div>
+    <h2 style="color: #da70d6; text-shadow: 0 0 10px #9932CC; font-size: 30px;">Custom Tags</h2>
+    <div class="container">
+        <div class="card">
+            <div>
+                <h2>Custom Tag Personalizat</h2>
+                <p>Creează-ți propriul tag personalizat pentru chat cu orice text dorești!</p>
+            </div>
+            <div>
+                <p class="price" data-raw-price="1">1 euro</p>
+                <button class="buy-btn" data-product="Custom Tag">Cumpără</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="quantityModal" class="modal">
     <div class="modal-content">
         <span class="close-btn" id="closeQuantityModal">&times;</span>
-        <h3>Alege cantitatea</h3>
+        <h3>Alege opțiunile</h3>
         <p id="qtyProductText">Produs: -</p>
         
-        <div class="quantity-container">
+        <!-- Container cantitate (pentru restul produselor) -->
+        <div id="quantityFieldContainer" class="quantity-container">
             <label for="productQuantity">Număr de bucăți:</label>
             <input type="number" id="productQuantity" min="1" value="1">
         </div>
 
-        <div class="total-price" id="totalPriceText">Total: 0 euro</div>
+        <!-- Container text personalizat (doar pentru Tags) -->
+        <div id="customTagContainer" class="tag-input-container" style="display: none;">
+            <label for="customTagText">Scrie textul pentru tag:</label>
+            <input type="text" id="customTagText" placeholder="ex: [Rege]">
+        </div>
+
+        <div class="total-price" id="totalPriceText">Total: 1 euro</div>
         
         <button class="next-step-btn" onclick="goToPayment()">Continuă spre plată</button>
     </div>
@@ -705,6 +733,10 @@ footer {
     const paymentProductText = document.getElementById("paymentProductText");
     
     const quantityInput = document.getElementById("productQuantity");
+    const quantityFieldContainer = document.getElementById("quantityFieldContainer");
+    const customTagContainer = document.getElementById("customTagContainer");
+    const customTagInput = document.getElementById("customTagText");
+
     const totalPriceText = document.getElementById("totalPriceText");
     const notification = document.getElementById("notification");
 
@@ -722,8 +754,18 @@ footer {
 
             qtyProductText.textContent = `Produs: ${currentProduct}`;
             
-            quantityInput.value = 1;
-            updateTotal();
+            // Verificăm dacă produsul este Custom Tag pentru a schimba câmpurile din modal
+            if (currentProduct === "Custom Tag") {
+                quantityFieldContainer.style.display = "none";
+                customTagContainer.style.display = "flex";
+                customTagInput.value = "";
+                totalPriceText.textContent = `Total: ${unitPrice} euro`;
+            } else {
+                quantityFieldContainer.style.display = "flex";
+                customTagContainer.style.display = "none";
+                quantityInput.value = 1;
+                updateTotal();
+            }
             
             quantityModal.style.display = "flex";
         }
@@ -744,10 +786,15 @@ footer {
 
     function goToPayment() {
         quantityModal.style.display = "none";
-        const qty = quantityInput.value;
-        const total = unitPrice * qty;
         
-        paymentProductText.textContent = `Produs: ${qty}x ${currentProduct} (${total} euro)`;
+        if (currentProduct === "Custom Tag") {
+            const tagText = customTagInput.value.trim() || "[Fără text]";
+            paymentProductText.textContent = `Produs: Custom Tag ("${tagText}") - ${unitPrice} euro`;
+        } else {
+            const qty = quantityInput.value;
+            const total = unitPrice * qty;
+            paymentProductText.textContent = `Produs: ${qty}x ${currentProduct} (${total} euro)`;
+        }
         
         paymentModal.style.display = "flex";
     }
@@ -770,9 +817,15 @@ footer {
     });
 
     function completePayment(method) {
-        const qty = quantityInput.value;
         paymentModal.style.display = "none";
-        notification.textContent = `Ai comandat ${qty}x ${currentProduct} prin ${method}! Mulțumiri!`;
+        if (currentProduct === "Custom Tag") {
+            const tagText = customTagInput.value.trim() || "[Fără text]";
+            notification.textContent = `Ai comandat Custom Tag ("${tagText}") prin ${method}! Mulțumiri!`;
+        } else {
+            const qty = quantityInput.value;
+            notification.textContent = `Ai comandat ${qty}x ${currentProduct} prin ${method}! Mulțumiri!`;
+        }
+        
         notification.style.display = "block";
         
         setTimeout(() => {
